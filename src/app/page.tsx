@@ -65,7 +65,7 @@ export default function Home() {
       {/* Section 1: Hero Section - 60% screen height */}
       <section className="h-[70vh] relative bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center">
         <div className="text-center text-white z-10">
-          <h1 className="text-5xl font-bold mb-4">עו"ד קובי כהן</h1>
+          <h1 className="text-5xl font-bold mb-4">עו"ד קובי רוזנברג</h1>
           <p className="text-xl">מומחה במשפט אזרחי ומסחרי</p>
         </div>
         {/* Background overlay for better text readability */}
@@ -73,7 +73,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: About Section - 100% screen height */}
-      <section className="min-h-screen py-20 bg-gray-50">
+      <section className="min-h-[80vh] py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 flex items-start gap-16">
           {/* Text content - 60% width */}
           <div className="flex-1 pt-0">
@@ -223,36 +223,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">עו"ד קובי כהן</h3>
-            <p className="text-gray-300">מומחה במשפט אזרחי ומסחרי</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h4 className="font-semibold mb-2">צור קשר</h4>
-              <p className="text-gray-300">טלפון: 03-1234567</p>
-              <p className="text-gray-300">אימייל: kobi@lawyer.co.il</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">כתובת</h4>
-              <p className="text-gray-300">רחוב הרצל 123</p>
-              <p className="text-gray-300">תל אביב, ישראל</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">שעות פעילות</h4>
-              <p className="text-gray-300">א'-ה': 9:00-18:00</p>
-              <p className="text-gray-300">ו': 9:00-13:00</p>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 pt-8">
-            <p className="text-gray-400">&copy; 2024 עו"ד קובי כהן. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

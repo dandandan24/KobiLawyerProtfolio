@@ -30,6 +30,36 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        
+        {/* Footer */}
+        <footer className="bg-gray-800 text-white py-12">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold mb-4">עו"ד קובי רוזנברג</h3>
+              <p className="text-gray-300">מומחה במשפט אזרחי ומסחרי</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <h4 className="font-semibold mb-2">צור קשר</h4>
+                <p className="text-gray-300">טלפון: 03-1234567</p>
+                <p className="text-gray-300">אימייל: kobi@lawyer.co.il</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">כתובת</h4>
+                <p className="text-gray-300">רחוב הרצל 123</p>
+                <p className="text-gray-300">תל אביב, ישראל</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">שעות פעילות</h4>
+                <p className="text-gray-300">א'-ה': 9:00-18:00</p>
+                <p className="text-gray-300">ו': 9:00-13:00</p>
+              </div>
+            </div>
+            <div className="border-t border-gray-700 pt-8">
+              <p className="text-gray-400">&copy; 2024 עו"ד קובי רוזנברג. כל הזכויות שמורות.</p>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
