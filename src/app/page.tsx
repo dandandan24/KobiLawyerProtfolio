@@ -127,35 +127,36 @@ export default function Home() {
       </section>
 
       {/* Section 4: Beliefs Section - 40% screen height */}
-      <section className="h-[40vh] py-16 bg-gray-50">
+      <section className="h-[60vh] py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold text-gray-800 mb-16">ערכי המשרד</h2>
           <div className="flex justify-between items-start mb-8 px-8">
             {/* 5 circular logos spread across full width */}
             {[
               { 
                 number: 1, 
-                title: "מקצועיות", 
-                subtitle: "ידע מעמיק וניסיון רב" 
+                title: "יסודיות", 
+                subtitle: "אני מבצע את עבודתי בצורה מדויקת ובקפדנות מקצועית יתרה" 
               },
               { 
                 number: 2, 
-                title: "יושרה", 
-                subtitle: "שקיפות מלאה בכל התהליך" 
+                title: "אסטרטגיה משפטית", 
+                subtitle: "התווית אסטרטגיה משפטית מותאמת לכל מקרה" 
               },
               { 
                 number: 3, 
-                title: "מחויבות", 
-                subtitle: "דאגה אמיתית ללקוח" 
+                title: "יחס אישי", 
+                subtitle: "אני תמיד זמין ללקחותיי ומטפל בכל בעיה בסבלנות רבה" 
               },
               { 
                 number: 4, 
-                title: "אמינות", 
-                subtitle: "הבטחות שאנחנו מקיימים" 
+                title: "פתרון סכסוכים", 
+                subtitle: "הבאת פתרונות יצירתיים המבוססים על גישה מעשית" 
               },
               { 
                 number: 5, 
-                title: "מצוינות", 
-                subtitle: "תוצאות מעולות תמיד" 
+                title: "מחויבות אישית", 
+                subtitle: "אני מחויב ללקוחותיי באופן בלתי מתפשר"
               }
             ].map((item, index) => (
               <div key={index} className="text-center flex flex-col items-center">
@@ -163,7 +164,7 @@ export default function Home() {
                   <span className="text-white text-3xl font-bold">{item.number}</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 text-center">{item.title}</h3>
-                <p className="text-base text-gray-600 max-w-32 text-center leading-relaxed">{item.subtitle}</p>
+                <p className="text-base text-gray-600 max-w-40 text-center leading-relaxed">{item.subtitle}</p>
               </div>
             ))}
           </div>
