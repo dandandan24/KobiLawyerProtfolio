@@ -43,13 +43,13 @@ export default function About() {
           
           {/* Picture - Full height minus navbar */}
           <div className="flex-1 flex justify-center">
-            <div className=" bg-gray-300 rounded-lg flex items-center justify-center shadow-lg">
+            <div className=" bg-gray-300 rounded-lg flex items-center justify-center shadow-lg mt-4">
               <Image
                 src="/aboutImage.jpeg"
                 alt="Attorney Kobi Rosenberg"
                 width={320}
                 height={384}
-                className="w-auto h-[730px] object-cover rounded-lg shadow-lg"
+                className="w-auto h-[700px] object-cover rounded-lg shadow-lg"
                 priority
               />
             </div>

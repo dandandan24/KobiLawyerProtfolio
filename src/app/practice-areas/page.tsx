@@ -1,39 +1,39 @@
 export default function PracticeAreas() {
   const specialities = [
     {
-      title: "דיני חוזים",
-      description: "ניסוח ובדיקת חוזים מכל הסוגים",
-      icon: "📄",
+      title: "יישוב סכסוכים וליטיגציה",
+      description: "פתרון סכסוכים מחוץ לכתלי בית המשפט וליטיגציה מקצועית",
+      icon: "⚖️",
       slug: "contracts"
     },
     {
-      title: "דיני עבודה",
-      description: "ייצוג עובדים ומעסיקים",
-      icon: "👷",
+      title: "משפט מסחרי",
+      description: "חברות, עסקים ועסקאות מסחריות",
+      icon: "🏢",
       slug: "labor-law"
     },
     {
-      title: "נזיקין",
-      description: "תביעות נזיקין ותאונות",
-      icon: "⚖️",
+      title: "נדל״ן",
+      description: "עסקאות נדל״ן, פיתוח והשקעות",
+      icon: "🏠",
       slug: "torts"
     },
     {
-      title: "משפט מסחרי",
-      description: "חברות ועסקים",
-      icon: "🏢",
+      title: "גבייה והוצאה לפועל",
+      description: "גביית חובות והוצאה לפועל מקצועית",
+      icon: "💰",
       slug: "commercial-law"
     },
     {
-      title: "דיני משפחה",
-      description: "גירושין, מזונות וירושות",
-      icon: "👨‍👩‍👧‍👦",
+      title: "צוואות ויפוי כח מתמשך",
+      description: "תכנון עזבון ויפוי כוח מתמשך",
+      icon: "📜",
       slug: "family-law"
     },
     {
       title: "דיני מקרקעין",
-      description: "רכישת נכסים ועסקאות",
-      icon: "🏠",
+      description: "רכישת נכסים ועסקאות מקרקעין",
+      icon: "🏘️",
       slug: "real-estate"
     }
   ];
@@ -109,7 +109,7 @@ export default function PracticeAreas() {
       {/* Other Specialities Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-12">תחומי התמחות נוספים</h2>
+          <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">תחומי התמחות נוספים</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {specialities.map((speciality, index) => (

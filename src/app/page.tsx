@@ -115,8 +115,8 @@ export default function Home() {
               { title: "דיני מקרקעין", description: "משפט שמתאר את העיסוק בכל תחום" }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-blue-600 text-2xl">⚖️</span>
+                <div className="w-20 h-20 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <img src="/conflictssolving.svg" alt="Speciality Icon" className="w-10 h-10 text-gray-800" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-white">{item.description}</p>
