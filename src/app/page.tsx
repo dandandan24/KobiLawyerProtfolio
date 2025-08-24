@@ -63,13 +63,13 @@ export default function Home() {
   return (
     <div className="font-sans" dir="rtl">
       {/* Section 1: Hero Section - 60% screen height */}
-      <section className="h-[70vh] relative bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center">
+      <section className="h-[70vh] relative flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/HomePageBackGround.jpeg')" }}>
         <div className="text-center text-white z-10">
-          <h1 className="text-5xl font-bold mb-4">עו"ד קובי רוזנברג</h1>
-          <p className="text-xl">מומחה במשפט אזרחי ומסחרי</p>
+          <h1 className="text-5xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">עו"ד קובי רוזנברג</h1>
+          <p className="text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">מומחה במשפט אזרחי ומסחרי</p>
         </div>
         {/* Background overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </section>
 
       {/* Section 2: About Section - 100% screen height */}
@@ -79,43 +79,47 @@ export default function Home() {
           <div className="flex-1 pt-0">
             <h2 className="text-4xl font-bold text-gray-800 mb-6">אודותיי</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-4">
-              אני עו"ד קובי כהן, בעל ניסיון של למעלה מ-15 שנה בתחום המשפט האזרחי והמסחרי. 
-              אני מתמחה בפתרון סכסוכים מורכבים ומספק ייעוץ משפטי מקצועי ואמין ללקוחותיי.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              המשרד שלי מתמחה במגוון רחב של תחומים משפטיים, כולל דיני חוזים, 
-              דיני עבודה, נזיקין ומשפט מסחרי. אני מאמין בגישה אישית ומותאמת לכל לקוח.
+            עו"ד קובי רוזנברג בעל תואר ראשון במשפטים (LLB) מאוניברסיטת תל אביב וחבר לשכת עורכי הדין משנת 1995.<br></br>
+לאורך שלשה עשורים של פעילות הופעתי במאות רבות של דיונים בבתי משפט בכל הערכאות, בבוררויות ובגישורים מגוונים, וצברתי מיומנויות בבנייה והתוויה של אסטרטגיה משפטית, גיבוש וכתיבה של כתבי טענות יסודיים ומעמיקים, ניהול חקירות ודיונים והובלת תיקים מורכבים בסביבה דינמית ותחרותית, עד לקבלת תוצאה מיטבית ללקוחותיי.<br></br>
+תפיסתי המקצועית מושתתת על יסודיות, הכנה משפטית קפדנית, זמינות גבוהה ויחס אישי ללקוח. אני שואף לפתור סכסוכים משפטיים מחוץ לכתליי בית המשפט, אך לא אהסס לנקוט בכל הליך משפטי נדרש כדי לשמור על האינטרסים של לקוחותיי.<br></br>
+ אני שם דגש על תוצאה מיטבית ללקוח – בין כתוצאה מהליך משפטי בבית משפט, בבוררות או בגישור – בין אם במסגרת ייעוץ עסקי, ובין טיפול בעסקאות נדל"ן מורכבות או בהליכי גבייה סבוכים.<br></br>
+אני מעמיד לרשות לקוחותיי רמה מקצועית גבוהה, אמינות, דיסקרטיות, והיכרות עמוקה עם מכלול הרבדים המשפטיים, העסקיים והאנושיים של כל תיק. ניסיוני ומחויבותי ללקוח מהווים בסיס איתן להשגת פתרונות יציבים וארוכי טווח לכל לקוח ולכל אתגר.
             </p>
           </div>
           {/* Picture - 40% width, 60% height */}
           <div className="flex-1 flex justify-center">
-            <div className="w-80 h-96 bg-gray-300 rounded-lg flex items-center justify-center">
-              <span className="text-gray-600">תמונה של עו"ד קובי</span>
-            </div>
+            <Image
+              src="/HomePageAboutImage.jpeg"
+              alt="Attorney Kobi Rosenberg"
+              width={320}
+              height={384}
+              className="w-auto h-[650px] object-cover rounded-lg shadow-lg"
+              priority
+            />
           </div>
         </div>
       </section>
 
       {/* Section 3: Specialities Section - 60% screen height */}
-      <section className="h-[70vh] py-20 bg-white">
+      <section className="h-[80vh] py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-16">תחומי התמחות</h2>
+          <h2 className="text-4xl font-bold text-white mb-16">תחומי התמחות</h2>
           <div className="grid grid-cols-3 gap-12">
             {/* 6 speciality items */}
             {[
-              { title: "דיני חוזים", description: "ניסוח ובדיקת חוזים מכל הסוגים" },
-              { title: "דיני עבודה", description: "ייצוג עובדים ומעסיקים" },
-              { title: "נזיקין", description: "תביעות נזיקין ותאונות" },
-              { title: "משפט מסחרי", description: "חברות ועסקים" },
-              { title: "דיני משפחה", description: "גירושין, מזונות וירושות" },
-              { title: "דיני מקרקעין", description: "רכישת נכסים ועסקאות" }
+              { title: "יישוב סכסוכים וליטיגציה", description: "משפט שמתאר את העיסוק בכל תחום" },
+              { title: "משפט מסחרי", description: "משפט שמתאר את העיסוק בכל תחום" },
+              { title: "נדל״ן", description: "משפט שמתאר את העיסוק בכל תחום" },
+              { title: "גבייה והוצאה לפועל", description: "משפט שמתאר את העיסוק בכל תחום" },
+              { title: "צוואות ויפוי כח מתמשך", description: "משפט שמתאר את העיסוק בכל תחום" },
+              { title: "דיני מקרקעין", description: "משפט שמתאר את העיסוק בכל תחום" }
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-blue-600 text-2xl">⚖️</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-white">{item.description}</p>
               </div>
             ))}
           </div>
@@ -155,7 +159,7 @@ export default function Home() {
               }
             ].map((item, index) => (
               <div key={index} className="text-center flex flex-col items-center">
-                <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+                <div className="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center mb-4">
                   <span className="text-white text-3xl font-bold">{item.number}</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 text-center">{item.title}</h3>
@@ -167,7 +171,7 @@ export default function Home() {
       </section>
 
       {/* Section 5: Recommendations Section - 40% screen height */}
-      <section className="h-[40vh] py-16 bg-white">
+      <section className="h-[50vh] py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">המלצות לקוחות</h2>
           
