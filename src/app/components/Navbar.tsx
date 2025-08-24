@@ -21,7 +21,7 @@ const Navbar = () => {
   const isSpecialitiesActive = pathname.startsWith('/practice-areas');
 
   return (
-    <nav className="bg-white shadow-md py-6 px-6 sticky top-0 z-50" dir="rtl">
+    <nav className="bg-white shadow-md py-4 px-6 sticky top-0 z-50" dir="rtl">
       <div className="flex justify-between items-center w-full">
         {/* Navigation items on the right */}
         <div className="flex gap-20 mx-10">

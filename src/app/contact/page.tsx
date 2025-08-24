@@ -29,10 +29,10 @@ export default function Contact() {
   return (
     <div className="font-sans" dir="rtl">
       {/* Hero Section */}
-      <section className="h-[30vh] relative bg-gradient-to-r from-gray-800 to-gray-700 flex items-center justify-center">
+      <section className="h-[45vh] relative flex items-center justify-center" style={{ backgroundImage: "url('/contact.jpeg')", backgroundSize: 'cover', backgroundPosition: '53% 83%' }}>
         <div className="text-center text-white z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">צור קשר</h1>
-          <p className="text-lg sm:text-xl lg:text-2xl">אנחנו כאן לעזור לך בכל שאלה או בעיה משפטית</p>
+          <h1 className="text-5xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">צור קשר</h1>
+          <p className="text-lg sm:text-xl lg:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">אנחנו כאן לעזור לך בכל שאלה או בעיה משפטית</p>
         </div>
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
