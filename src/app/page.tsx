@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useScrollAnimation } from "./components/ScrollAnimationProvider";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { animatedElements } = useScrollAnimation();
 
   const recommendations = [
     {
@@ -64,9 +66,9 @@ export default function Home() {
     <div className="font-sans" dir="rtl">
       {/* Section 1: Hero Section - 60% screen height */}
       <section className="h-[70vh] relative flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/HomePageBackGround.jpeg')" }}>
-        <div className="text-center text-white z-10">
+        <div className={`text-center text-white z-10 fade-in-up ${animatedElements.has('hero') ? 'visible' : ''}`} data-animate-id="hero">
           <h1 className="text-5xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">עו"ד קובי רוזנברג</h1>
-          <p className="text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">מומחה במשפט אזרחי ומסחרי</p>
+          <p className="text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"> משפט אזרחי ומסחרי</p>
         </div>
         {/* Background overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20"></div>
@@ -74,26 +76,26 @@ export default function Home() {
 
       {/* Section 2: About Section - 100% screen height */}
       <section className="min-h-[80vh] py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 flex items-start gap-16">
+        <div className="w-full 2xl:px-20 xl:px-10 flex items-center gap-32">
           {/* Text content - 60% width */}
-          <div className="flex-1 pt-0">
+          <div className={`flex-1 pt-0 fade-in-up ${animatedElements.has('about') ? 'visible' : ''}`} data-animate-id="about">
             <h2 className="text-4xl font-bold text-gray-800 mb-6">אודותיי</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-4">
+            <p className="text-xl text-gray-600 leading-relaxed mb-4 text-justify">
             עו"ד קובי רוזנברג בעל תואר ראשון במשפטים (LLB) מאוניברסיטת תל אביב וחבר לשכת עורכי הדין משנת 1995.<br></br>
-לאורך שלשה עשורים של פעילות הופעתי במאות רבות של דיונים בבתי משפט בכל הערכאות, בבוררויות ובגישורים מגוונים, וצברתי מיומנויות בבנייה והתוויה של אסטרטגיה משפטית, גיבוש וכתיבה של כתבי טענות יסודיים ומעמיקים, ניהול חקירות ודיונים והובלת תיקים מורכבים בסביבה דינמית ותחרותית, עד לקבלת תוצאה מיטבית ללקוחותיי.<br></br>
-תפיסתי המקצועית מושתתת על יסודיות, הכנה משפטית קפדנית, זמינות גבוהה ויחס אישי ללקוח. אני שואף לפתור סכסוכים משפטיים מחוץ לכתליי בית המשפט, אך לא אהסס לנקוט בכל הליך משפטי נדרש כדי לשמור על האינטרסים של לקוחותיי.<br></br>
- אני שם דגש על תוצאה מיטבית ללקוח – בין כתוצאה מהליך משפטי בבית משפט, בבוררות או בגישור – בין אם במסגרת ייעוץ עסקי, ובין טיפול בעסקאות נדל"ן מורכבות או בהליכי גבייה סבוכים.<br></br>
-אני מעמיד לרשות לקוחותיי רמה מקצועית גבוהה, אמינות, דיסקרטיות, והיכרות עמוקה עם מכלול הרבדים המשפטיים, העסקיים והאנושיים של כל תיק. ניסיוני ומחויבותי ללקוח מהווים בסיס איתן להשגת פתרונות יציבים וארוכי טווח לכל לקוח ולכל אתגר.
+המשרד הנו משרד בוטיק ותחומי עיסוקו המרכזיים כוללים ליטיגציה אזרחית – מסחרית, נדל"ן, חוזים מסחריים, גבייה והוצאה לפועל.<br></br>
+כל לקוח זוכה לטיפול פרטני, תוך הקפדה על פרטים, מחויבות בלתי מתפשרת ללקוח והתוויית אסטרטגיה מותאמת אישית ללקוח.<br></br>
+תפיסתו המקצועית של קובי מושתתת על יסודיות, הכנה משפטית קפדנית, זמינות גבוהה ויחס אישי ללקוח. קובי שואף לפתור סכסוכים משפטיים מחוץ לכתליי בית המשפט, אך לא יהסס לנקוט בכל הליך משפטי נדרש כדי לשמור על האינטרסים של לקוחותיו. הוא שם דגש על תוצאה מיטבית ללקוח – בין כתוצאה מהליך משפטי בבית משפט, בבוררות או בגישור – בין אם במסגרת ייעוץ עסקי, ובין טיפול בעסקאות נדל"ן מורכבות או בהליכי גבייה סבוכים.<br></br>
+קובי מעמיד לרשות לקוחותיו רמה מקצועית גבוהה, אמינות, דיסקרטיות, והיכרות עמוקה עם מכלול הרבדים המשפטיים, העסקיים והאנושיים של כל תיק. ניסיונו ומחויבותו ללקוח מהווים בסיס איתן להשגת פתרונות יציבים וארוכי טווח לכל לקוח ולכל אתגר.
             </p>
           </div>
           {/* Picture - 40% width, 60% height */}
           <div className="flex-1 flex justify-center">
             <Image
-              src="/HomePageAboutImage.jpeg"
+              src="/MichalAboutPIc.jpg"
               alt="Attorney Kobi Rosenberg"
-              width={320}
-              height={384}
-              className="w-auto h-[650px] object-cover rounded-lg shadow-lg"
+              width={1000}
+              height={1000}
+              className="w-auto 2xl:h-[650px] h-[600] object-cover rounded-lg shadow-lg"
               priority
             />
           </div>
@@ -102,19 +104,24 @@ export default function Home() {
 
       {/* Section 3: Specialities Section - 60% screen height */}
       <section className="h-[80vh] py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-16">תחומי התמחות</h2>
-          <div className="grid grid-cols-3 gap-12">
+                    <div className="max-w-7xl mx-auto px-6 text-center">
+              <h2 className={`text-4xl font-bold text-white mb-16 fade-in-up ${animatedElements.has('specialities-title') ? 'visible' : ''}`} data-animate-id="specialities-title">תחומי התמחות</h2>
+          <div className="grid grid-cols-3 2xl:gap-36 gap-12">
             {/* 6 speciality items */}
                   {[
-                    { title: "יישוב סכסוכים וליטיגציה", description: "משפט שמתאר את העיסוק בכל תחום", svg: "/conflictssolving.svg" },
-                    { title: "משפט מסחרי", description: "משפט שמתאר את העיסוק בכל תחום", svg: "/commercial.svg" },
-                    { title: "נדל״ן", description: "משפט שמתאר את העיסוק בכל תחום", svg: "/realestate.svg" },
-                    { title: "גבייה והוצאה לפועל", description: "משפט שמתאר את העיסוק בכל תחום", svg: "/gvia.svg" },
-                    { title: "צוואות ויפוי כח מתמשך", description: "משפט שמתאר את העיסוק בכל תחום", svg: "/contract.svg" },
+                    { title: "יישוב סכסוכים וליטיגציה", description: "ייצוג  בהתדיינויות אזרחיות ומסחריות בבתי משפט", svg: "/conflictssolving.svg" },
+                    { title: "משפט מסחרי", description: "ליווי וייעוץ שוטף לחברות שונות בכל תחומי המשפט המסחרי", svg: "/commercial.svg" },
+                    { title: "נדל״ן", description: "עריכת הסכמי מכר, שכירות, משכנתאות, הלוואות", svg: "/realestate.svg" },
+                    { title: "גבייה והוצאה לפועל", description: "גביה וניהול הליכי הוצאה לפועל עבור פרטים וחברות", svg: "/gvia.svg" },
+                    { title: "העברה בין דורית ושירותי נוטריון", description: "עריכת צוואות, יפוי כח מתמשך, הסכמים בין יורשים, נאמנויות ומתן שירותים נוטריונים.", svg: "/contract.svg" },
                     { title: "דיני מקרקעין", description: "משפט שמתאר את העיסוק בכל תחום", svg: "/property.svg" }
                   ].map((item, index) => (
-                    <div key={index} className="text-center">
+                    <div 
+                      key={index} 
+                      className={`text-center fade-in-up ${animatedElements.has(`speciality-${index}`) ? 'visible' : ''}`} 
+                      data-animate-id={`speciality-${index}`}
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                    >
                       <div className="w-20 h-20 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                         <img src={item.svg} alt={`${item.title} Icon`} className="w-10 h-10 text-gray-800" />
                       </div>
@@ -127,11 +134,11 @@ export default function Home() {
       </section>
 
       {/* Section 4: Beliefs Section - 40% screen height */}
-      <section className="h-[60vh] py-16 bg-gray-50">
+      {/* <section className="h-[60vh] py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-16">ערכי המשרד</h2>
           <div className="flex justify-between items-start mb-8 px-8">
-            {/* 5 circular logos spread across full width */}
+            {/* 5 circular logos spread across full width 
             {[
               { 
                 number: 1, 
@@ -169,12 +176,12 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Section 5: Recommendations Section - 40% screen height */}
       <section className="h-[50vh] py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">המלצות לקוחות</h2>
+          <h2 className={`text-3xl font-bold text-gray-800 text-center mb-12 fade-in-up ${animatedElements.has('recommendations-title') ? 'visible' : ''}`} data-animate-id="recommendations-title">המלצות לקוחות</h2>
           
           {/* Carousel Container */}
           <div className="relative">

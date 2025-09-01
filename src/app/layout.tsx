@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { David_Libre } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { ScrollAnimationProvider } from "./components/ScrollAnimationProvider";
+import { PageTransition } from "./components/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +14,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const davidLibre = David_Libre({
+  variable: "--font-david-libre",
+  subsets: ["hebrew", "latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -26,40 +35,40 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${davidLibre.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12">
-          <div className="max-w-7xl mx-auto px-6 text-center">
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4">עו"ד קובי רוזנברג</h3>
-              <p className="text-gray-300">מומחה במשפט אזרחי ומסחרי</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <h4 className="font-semibold mb-2">צור קשר</h4>
-                <p className="text-gray-300">טלפון: 03-1234567</p>
-                <p className="text-gray-300">אימייל: kobi@lawyer.co.il</p>
+        <ScrollAnimationProvider>
+          <Navbar />
+          <PageTransition>
+            {children}
+            
+            {/* Footer */}
+            <footer className="bg-gray-800 text-white py-12">
+              <div className="max-w-7xl mx-auto px-6 text-center">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold mb-4">עו"ד קובי רוזנברג</h3>
+                  <p className="text-gray-300">משפט אזרחי ומסחרי</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <h4 className="font-semibold mb-2">צור קשר</h4>
+                    <p className="text-gray-300">טלפון: 03-5609697</p>
+                    <p className="text-gray-300">אימייל: kobi@rosenberg-law.co.il</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">כתובת</h4>
+                    <p className="text-gray-300">מידטאון, דרך מנחם בגין 144</p>
+                    <p className="text-gray-300">תל אביב, ישראל</p>
+                  </div>
+                
+                </div>
+                <div className="border-t border-gray-700 pt-8">
+                  <p className="text-gray-400">&copy; 2025 עו"ד קובי רוזנברג. כל הזכויות שמורות.</p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2">כתובת</h4>
-                <p className="text-gray-300">רחוב הרצל 123</p>
-                <p className="text-gray-300">תל אביב, ישראל</p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">שעות פעילות</h4>
-                <p className="text-gray-300">א'-ה': 9:00-18:00</p>
-                <p className="text-gray-300">ו': 9:00-13:00</p>
-              </div>
-            </div>
-            <div className="border-t border-gray-700 pt-8">
-              <p className="text-gray-400">&copy; 2024 עו"ד קובי רוזנברג. כל הזכויות שמורות.</p>
-            </div>
-          </div>
-        </footer>
+            </footer>
+          </PageTransition>
+        </ScrollAnimationProvider>
       </body>
     </html>
   );

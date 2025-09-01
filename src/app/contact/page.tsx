@@ -151,13 +151,18 @@ export default function Contact() {
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">מיקום המשרד</h2>
               
-              {/* Map Placeholder */}
-              <div className="w-full h-80 bg-gray-300 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🗺️</div>
-                  <span className="text-gray-600">מפה של מיקום המשרד</span>
-                  <p className="text-sm text-gray-500 mt-2">רחוב הרצל 123, תל אביב</p>
-                </div>
+              {/* Google Maps Embed */}
+              <div className="w-full h-80 rounded-lg overflow-hidden mb-6">
+                <iframe
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=דרך+מנחם+בגין+144+תל+אביב+ישראל"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="מיקום המשרד - דרך מנחם בגין 144, תל אביב"
+                ></iframe>
               </div>
               
               {/* Contact Information */}
@@ -168,7 +173,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">כתובת</p>
-                    <p className="text-gray-600">רחוב הרצל 123, תל אביב, ישראל</p>
+                    <p className="text-gray-600">מידטאון, דרך מנחם בגין 144, תל אביב</p>
                   </div>
                 </div>
                 
@@ -178,7 +183,16 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">טלפון</p>
-                    <p className="text-gray-600">03-1234567</p>
+                    <p className="text-gray-600">050-333-9697</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">📞</span>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-800">טלפון משרד</p>
+                    <p className="text-gray-600">03-5609697</p>
                   </div>
                 </div>
                 
@@ -188,19 +202,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">אימייל</p>
-                    <p className="text-gray-600">kobi@lawyer.co.il</p>
+                    <p className="text-gray-600">kobi@rosenberg-law.co.il</p>
                   </div>
                 </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">🕒</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-800">שעות פעילות</p>
-                    <p className="text-gray-600">א'-ה': 9:00-18:00 | ו': 9:00-13:00</p>
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>

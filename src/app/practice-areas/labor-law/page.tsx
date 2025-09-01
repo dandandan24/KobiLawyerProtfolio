@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function LaborLawPage() {
   return (
     <div className="font-sans" dir="rtl">
@@ -12,58 +13,33 @@ export default function LaborLawPage() {
 
       {/* Main Content */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto 2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
             {/* Text content - Left side */}
             <div className="w-full lg:w-1/2">
               <h2 className="text-4xl font-bold text-gray-800 mb-6">מומחיות במשפט מסחרי</h2>
               
               <div className="space-y-4 lg:space-y-6">
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  משפט מסחרי הוא תחום מרכזי בעבודתי המשפטית. אני מתמחה בייצוג חברות ועסקים 
-                  במגוון רחב של נושאים מסחריים ועסקאות מורכבות.
-                </p>
-                
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  המשרד שלי מספק שירותים מקיפים בתחום המשפט המסחרי, כולל ייעוץ משפטי, 
-                  ניסוח הסכמים מסחריים, הקמת חברות וניהול עסקאות מורכבות.
-                </p>
-                
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  עם ניסיון של למעלה מ-15 שנה, אני מכיר היטב את החקיקה והפסיקה 
-                  בתחום המשפט המסחרי ומספק פתרונות מקצועיים ואפקטיביים.
+                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify">
+                משרדנו עוסק בליווי וייעוץ שוטף לחברות שונות בכל תחומי פעילותן המסחרית על כל גווניה, לרבות; הכנת חוזים מסוגים שונים כגון הסכמי התקשרות מסחריים, הסכמי שכירות,  הסכמים עם קבלנים, פרילנסרים וספקים, הסכמים מול לקוחות, הסכמי ניהול, הסכמי מכר מניות, עריכת הסכמים בין בעלי המניות ו/או עם צדדים שלישיים במקרה של הכנסת שותפים, רכישת עסקים נוספים, מכירת פעילות,  מכירת מניות וכיוצ"ב.
+
                 </p>
               </div>
               
               {/* Services */}
-              <div className="mt-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">שירותי המשרד</h3>
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">ייצוג חברות ועסקים</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">ניסוח הסכמים מסחריים</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">הקמת חברות וניהול מבנה</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">ניהול עסקאות מסחריות מורכבות</span>
-                  </div>
-                </div>
-              </div>
+           
             </div>
             
             {/* Picture - Right side */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div className="w-full max-w-md lg:max-w-lg h-96 bg-gray-300 rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-gray-600 text-lg">תמונה של משפט מסחרי</span>
-              </div>
+            <Image
+                src="/Commercial.jpeg"
+                alt="realestate"
+                width={1000}
+                height={1000}
+                className="w-auto 2xl:h-[650px] h-[600px] object-cover rounded-lg shadow-lg"
+                priority
+              />           
             </div>
           </div>
         </div>
@@ -72,7 +48,7 @@ export default function LaborLawPage() {
       {/* Category Navigation Bar */}
       <section className="py-8 bg-white">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">תחומי התמחות נוספים</h2>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto 2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="/practice-areas/contracts" 

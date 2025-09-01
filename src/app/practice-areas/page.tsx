@@ -52,7 +52,7 @@ export default function PracticeAreas() {
 
       {/* Main Speciality Section - 50% screen width layout */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full 2xl:px-20 xl:px-10 px-4">
           <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
             {/* Text content - Left side */}
             <div className="w-full lg:w-1/2">
@@ -108,7 +108,7 @@ export default function PracticeAreas() {
 
       {/* Other Specialities Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full 2xl:px-20 xl:px-10 px-4">
           <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">תחומי התמחות נוספים</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

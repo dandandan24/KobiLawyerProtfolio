@@ -80,6 +80,15 @@ const Navbar = () => {
           </div>
           
           <Link 
+            href="/files" 
+            className={`text-xl font-bold text-gray-700 hover:text-gray-800 hover:underline hover:underline-offset-6 hover:decoration-gray-800 hover:decoration-2 transition-all duration-200 ${
+              isActive('/files') ? 'underline underline-offset-6 decoration-gray-800 decoration-2' : ''
+            }`}
+          >
+            פסקי דין
+          </Link>
+          
+          <Link 
             href="/contact" 
             className={`text-xl font-bold text-gray-700 hover:text-gray-800 hover:underline hover:underline-offset-6 hover:decoration-gray-800 hover:decoration-2 transition-all duration-200 ${
               isActive('/contact') ? 'underline underline-offset-6 decoration-gray-800 decoration-2' : ''
@@ -90,8 +99,8 @@ const Navbar = () => {
         </div>
         
         {/* Logo on the left */}
-        <div className="text-3xl font-bold text-gray-800">
-          Logo
+        <div className="flex items-center">
+          <img src="/Logo.svg" alt="Logo" className="h-12 w-auto" />
         </div>
       </div>
     </nav>

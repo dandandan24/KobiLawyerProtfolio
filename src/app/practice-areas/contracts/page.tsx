@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function ContractsPage() {
   return (
     <div className="font-sans" dir="rtl">
@@ -13,58 +14,36 @@ export default function ContractsPage() {
 
       {/* Main Content */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto 2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
             {/* Text content - Left side */}
             <div className="w-full lg:w-1/2">
               <h2 className="text-4xl font-bold text-gray-800 mb-6">מומחיות ביישוב סכסוכים וליטיגציה</h2>
               
               <div className="space-y-4 lg:space-y-6">
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  יישוב סכסוכים וליטיגציה הם תחומים מרכזיים בעבודתי המשפטית. אני מתמחה בפתרון 
-                  סכסוכים מחוץ לכתלי בית המשפט ובניהול הליכים משפטיים מקצועיים.
-                </p>
-                
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  עם ניסיון של למעלה מ-15 שנה בתחום, אני מספק שירות מקיף הכולל גישור, בוררות, 
-                  ייעוץ משפטי וליטיגציה מקצועית בבתי המשפט.
-                </p>
-                
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  המשרד שלי מתמחה בפתרון סכסוכים מסחריים, סכסוכי עבודה, סכסוכי נדל״ן 
-                  וסכסוכים אזרחיים מורכבים.
+                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify">
+                ייצוג לקוחות בהתדיינויות אזרחיות בתחומים שונים לרבות; מחלוקות עסקיות הנובעות מהפרות חוזה, מתן שירותים לקויים, תביעות לפיצויים, סכסוכים כספיים, סכסוכים בין שותפים, תביעות בענייני מסחר, אנרגיה, אשראי ומימון חוץ בנקאי, נדל"ן, תיווך וכיו"ב. <br></br>
+                <br></br>
+משרדנו מלווה תאגידים ויחידים, בסכסוכים מסחריים מורכבים, החל מגיבוש האסטרטגיה המשפטית והשלבים המקדמיים, עריכת כתבי הטענות מוקפדים, ייצוג בפני ערכאות ועד לסיומו של ההליך המשפטי, לרבות יישוב סכסוכים, בדרך של בוררות, פשרה או גישור.<br></br>
+<br></br>
+לקובי ניסיון רב בייצוג ובליווי משפטי בסכסוכים משפטיים והוא מטפל בכל תיק תוך מתן תשומת לב לפרטים, לחדשנות, ליצירתיות ותוך התעדכנות שוטפת בכל החידושים המשפטיים במטרה להשיג ללקוחות תוצאות מיטביות.<br></br>
                 </p>
               </div>
               
               {/* Services */}
-              <div className="mt-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">שירותי המשרד</h3>
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">גישור ופתרון סכסוכים</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">בוררות מקצועית</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">ליטיגציה בבתי משפט</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">ייעוץ משפטי לפתרון סכסוכים</span>
-                  </div>
-                </div>
-              </div>
+            
             </div>
             
             {/* Picture - Right side */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div className="w-full max-w-md lg:max-w-lg h-96 bg-gray-300 rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-gray-600 text-lg">תמונה של יישוב סכסוכים וליטיגציה</span>
-              </div>
+            <Image
+                src="/specialitisimages/Conflict.jpeg"
+                alt="conflictSolving"
+                width={1000}
+                height={1000}
+                className="w-auto 2xl:h-[650px] h-[600px] object-cover rounded-lg shadow-lg"
+                priority
+              />           
             </div>
           </div>
         </div>
@@ -73,7 +52,7 @@ export default function ContractsPage() {
       {/* Category Navigation Bar */}
       <section className="py-8 bg-white">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">תחומי התמחות נוספים</h2>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto 2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="/practice-areas/contracts" 

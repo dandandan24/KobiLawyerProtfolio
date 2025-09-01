@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function CommercialLawPage() {
   return (
     <div className="font-sans" dir="rtl">
@@ -12,58 +13,33 @@ export default function CommercialLawPage() {
 
       {/* Main Content */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto 2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
             {/* Text content - Left side */}
             <div className="w-full lg:w-1/2">
               <h2 className="text-4xl font-bold text-gray-800 mb-6">מומחיות בגבייה והוצאה לפועל</h2>
               
               <div className="space-y-4 lg:space-y-6">
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  גבייה והוצאה לפועל הם תחומים מורכבים ומאתגרים. אני מתמחה 
-                  בגביית חובות ובניהול הליכי הוצאה לפועל מקצועיים ואפקטיביים.
-                </p>
-                
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  המשרד שלי מספק שירותים מקיפים בתחום הגבייה, כולל הכנת בקשות הוצאה לפועל, 
-                  ניהול הליכי גבייה, ייעוץ משפטי ופתרון בעיות מורכבות.
-                </p>
-                
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                  עם ניסיון של למעלה מ-15 שנה, אני מכיר היטב את החקיקה והפסיקה 
-                  בתחום הגבייה ומספק פתרונות מקצועיים ואפקטיביים.
+                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify">
+                גביה וניהול הליכי הוצל"פ עבור פרטים וחברות, החל מפתיחת תיק ההוצאה לפועל דרך ניהול התדיינויות שונות בלשכת ההוצאה לפועל ובית המשפט והגעה להסדרי פשרה עם לקוחות, וכלה במימוש בפועל של נכסים.
+
                 </p>
               </div>
               
               {/* Services */}
-              <div className="mt-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">שירותי המשרד</h3>
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">הכנת בקשות הוצאה לפועל</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">ניהול הליכי גבייה</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">ייעוץ משפטי לגבייה</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span className="text-gray-700">פתרון בעיות גבייה מורכבות</span>
-                  </div>
-                </div>
-              </div>
+             
             </div>
             
             {/* Picture - Right side */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div className="w-full max-w-md lg:max-w-lg h-96 bg-gray-300 rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-gray-600 text-lg">תמונה של גבייה והוצאה לפועל</span>
-              </div>
+            <Image
+                src="/realestate.jpeg"
+                alt="realestate"
+                width={500}
+                height={384}
+                className="w-auto 2xl:h-[650px] h-[600px] object-cover rounded-lg shadow-lg"
+                priority
+              />           
             </div>
           </div>
         </div>
@@ -72,7 +48,7 @@ export default function CommercialLawPage() {
       {/* Category Navigation Bar */}
       <section className="py-8 bg-white">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">תחומי התמחות נוספים</h2>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto 2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="/practice-areas/contracts" 
