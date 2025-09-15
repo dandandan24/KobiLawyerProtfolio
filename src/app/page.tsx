@@ -120,7 +120,7 @@ export default function Home() {
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
                     <div className="w-20 h-20 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <img src={item.svg} alt={`${item.title} Icon`} className="w-10 h-10 text-gray-800" />
+                      <Image src={item.svg} alt={`${item.title} Icon`} width={40} height={40} className="w-10 h-10 text-gray-800" />
                     </div>
                     <h3 className="text-xl md:text-xl sm:text-lg font-semibold text-white mb-2">{item.title}</h3>
                     <p className="text-white md:text-base sm:text-sm">{item.description}</p>
@@ -140,7 +140,7 @@ export default function Home() {
                     style={{ animationDelay: `${(index + 2) * 0.2}s` }}
                   >
                     <div className="w-20 h-20 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <img src={item.svg} alt={`${item.title} Icon`} className="w-10 h-10 text-gray-800" />
+                      <Image src={item.svg} alt={`${item.title} Icon`} width={40} height={40} className="w-10 h-10 text-gray-800" />
                     </div>
                     <h3 className="text-xl md:text-xl sm:text-lg font-semibold text-white mb-2">{item.title}</h3>
                     <p className="text-white md:text-base sm:text-sm">{item.description}</p>
@@ -229,7 +229,7 @@ export default function Home() {
             <div className="flex gap-8 justify-center flex-col sm:flex-row">
               {getVisibleRecommendations().map((rec, index) => (
                 <div key={index} className={`bg-gray-50 p-6 rounded-lg max-w-xs text-center mx-auto sm:mx-0 ${index > 0 ? 'hidden sm:block' : ''}`}>
-                  <p className="text-gray-600 mb-4 italic md:text-base sm:text-sm">"{rec.text}"</p>
+                  <p className="text-gray-600 mb-4 italic md:text-base sm:text-sm">"{rec.text}"</p> {/* eslint-disable-line react/no-unescaped-entities */}
                   <h4 className="font-semibold text-gray-800 md:text-base sm:text-sm">{rec.name}</h4>
                   <p className="text-gray-500 text-sm sm:text-xs">{rec.company}</p>
                 </div>

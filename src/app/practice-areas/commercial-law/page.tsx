@@ -20,7 +20,7 @@ export default function CommercialLawPage() {
               
               <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
                 <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-                גביה וניהול הליכי הוצל"פ עבור פרטים וחברות, החל מפתיחת תיק ההוצאה לפועל דרך ניהול התדיינויות שונות בלשכת ההוצאה לפועל ובית המשפט והגעה להסדרי פשרה עם לקוחות, וכלה במימוש בפועל של נכסים.
+                גביה וניהול הליכי הוצל&ldquo;פ עבור פרטים וחברות, החל מפתיחת תיק ההוצאה לפועל דרך ניהול התדיינויות שונות בלשכת ההוצאה לפועל ובית המשפט והגעה להסדרי פשרה עם לקוחות, וכלה במימוש בפועל של נכסים.
 
                 </p>
               </div>
