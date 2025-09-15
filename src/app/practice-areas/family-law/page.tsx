@@ -17,17 +17,17 @@ export default function FamilyLawPage() {
           <div className="flex flex-col lg:flex-row items-start gap-0 lg:gap-0">
             {/* Text content - Left side on desktop, above image on mobile */}
             <div className="w-full lg:w-2/5 lg:ml-30 lg:mr-10">
-              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden lg:block">מומחיות בצוואות ויפוי כח מתמשך</h2>
+              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden lg:block">צוואות ויפוי כח מתמשך</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
                 <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-                עריכת צוואות מותאמות אישית וכלכלית תוך יצירת נאמנויות והקדשים פרטיים בצוואה.<br></br>
+                עריכת צוואות מותאמות אישית וכלכלית תוך יצירת נאמנויות והקדשים פרטיים בצוואה.
 עריכת הסכמי חלוקת עזבון, הסכמי ממון ועוד.<br></br>
 <br></br>
 
-אנו עוסקים בעריכת יפוי כח מתמשך שמאפשר לכל אדם לקבוע מראש כיצד ועל ידי מי יטופלו כל ענייניו; בריאותיים, אישיים וכלכליים, אם וכאשר לא יוכל לטפל בכך בעצמו עקב מוגבלויות שונות.<br></br>
+  עריכת יפוי כח מתמשך שמאפשר לכל אדם לקבוע מראש כיצד ועל ידי מי יטופלו כל ענייניו; בריאותיים, אישיים וכלכליים, אם וכאשר לא יוכל לטפל בכך בעצמו עקב מוגבלויות שונות.<br></br>
 <br></br>
-אנו מעניקים שירותים נוטריונים שונים; לרבות אימותי חתימה, אישורי צוואות, אישורי נכונות תרגום (ותרגום בסיוע חיצוני) אפוסטיל וכו'.<br></br>
+מתן שירותים נוטריונים שונים; לרבות אימותי חתימה, אישורי צוואות, אישורי נכונות תרגום (ותרגום בסיוע חיצוני) אפוסטיל וכו'.<br></br>
 
                 </p>
                 

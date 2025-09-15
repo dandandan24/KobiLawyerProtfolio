@@ -17,7 +17,7 @@ export default function LaborLawPage() {
           <div className="flex flex-col lg:flex-row items-start gap-0 lg:gap-0">
             {/* Text content - Left side on desktop, above image on mobile */}
             <div className="w-full lg:w-2/5 lg:ml-30 lg:mr-10">
-              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden lg:block">מומחיות במשפט מסחרי</h2>
+              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden lg:block">משפט מסחרי</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
                 <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
