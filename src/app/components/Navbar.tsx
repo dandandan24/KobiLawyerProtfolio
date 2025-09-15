@@ -38,7 +38,7 @@ const Navbar = () => {
   const isSpecialitiesActive = pathname.startsWith('/practice-areas');
 
   return (
-    <nav className={`${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-white shadow-md' : 'bg-transparent shadow-none') + ' md:bg-white md:shadow-md sticky' : 'bg-white shadow-md sticky'} py-4 px-6 top-0 z-50 w-full ${isMobileMenuOpen ? '' : 'transition-all duration-300'}`} dir="rtl">
+    <nav className={`${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-white shadow-md' : 'bg-transparent shadow-none') + ' lg:bg-white lg:shadow-md sticky' : 'bg-white shadow-md sticky'} py-4 px-6 top-0 z-50 w-full ${isMobileMenuOpen ? '' : 'transition-all duration-300'}`} dir="rtl">
       <div className="flex justify-between items-center w-full">
         {/* Mobile Burger Menu Button */}
         <button

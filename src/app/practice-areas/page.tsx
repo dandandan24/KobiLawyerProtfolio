@@ -43,7 +43,7 @@ export default function PracticeAreas() {
       {/* Hero Section - 30% screen height with background photo */}
       <section className="h-[30vh] relative bg-gradient-to-r from-gray-800 to-gray-700 flex items-center justify-center">
         <div className="text-center text-white z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">תחומי התמחות</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-6xl font-bold mb-4">תחומי התמחות</h1>
           <p className="text-lg sm:text-xl lg:text-2xl">מומחיות במגוון רחב של תחומים משפטיים</p>
         </div>
         {/* Background overlay for better text readability */}
