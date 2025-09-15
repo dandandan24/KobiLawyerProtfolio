@@ -13,7 +13,7 @@ interface FileItem {
 export default function Files() {
   const [selectedFile, setSelectedFile] = useState<FileItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default to true for SSR
   const [showScrollTop, setShowScrollTop] = useState(false);
   
 
@@ -200,10 +200,16 @@ export default function Files() {
     setSelectedFile(null);
   };
 
-  // Detect mobile by viewport width only on client
+  // Detect mobile/tablet by viewport width only on client
   useEffect(() => {
-    const updateIsMobile = () => setIsMobile(window.innerWidth < 768);
+    const updateIsMobile = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 1024);
+    };
+    
+    // Run immediately on mount
     updateIsMobile();
+    
     window.addEventListener('resize', updateIsMobile);
     return () => window.removeEventListener('resize', updateIsMobile);
   }, []);
@@ -228,12 +234,12 @@ export default function Files() {
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
 
-      {/* Scroll To Top - Mobile Only */}
+      {/* Scroll To Top - Mobile and Tablet */}
       {!isModalOpen && showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="חזרה למעלה"
-          className="md:hidden fixed bottom-6 left-6 z-40 bg-gray-800 text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center active:scale-95"
+          className="lg:hidden fixed bottom-6 left-6 z-40 bg-gray-800 text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center active:scale-95"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
             <path fillRule="evenodd" d="M12 4.5a.75.75 0 01.53.22l6 6a.75.75 0 11-1.06 1.06L12.75 6.81V19.5a.75.75 0 01-1.5 0V6.81L6.53 11.78a.75.75 0 11-1.06-1.06l6-6a.75.75 0 01.53-.22z" clipRule="evenodd" />
@@ -293,10 +299,10 @@ export default function Files() {
           {/* Document Viewer - Full Screen */}
           {(() => {
             const filePath = `/files/${selectedFile.fileName}`;
-            if (isMobile) {
-              // Mobile fallback: many mobile browsers (especially iOS Safari) block inline PDF rendering.
-              return (
-                <div className="w-full h-full flex flex-col items-center justify-center gap-6 px-6 text-center">
+            return (
+              <>
+                {/* Mobile/Tablet fallback - hidden on desktop */}
+                <div className="xl:hidden w-full h-full flex flex-col items-center justify-center gap-6 px-6 text-center">
                   <p className="text-white text-lg">צפייה ב-PDF במובייל נתמכת בלשונית חדשה.</p>
                   <a
                     href={filePath}
@@ -314,15 +320,14 @@ export default function Files() {
                     הורדה
                   </a>
                 </div>
-              );
-            }
-            // Desktop: default browser PDF viewer
-            return (
-              <iframe
-                src={`${filePath}#toolbar=1&navpanes=1&scrollbar=1&view=FitH`}
-                className="w-full h-full"
-                title={selectedFile.title}
-              />
+                
+                {/* Desktop PDF viewer - hidden on mobile/tablet */}
+                <iframe
+                  src={`${filePath}#toolbar=1&navpanes=1&scrollbar=1&view=FitH`}
+                  className="hidden xl:block w-full h-full"
+                  title={selectedFile.title}
+                />
+              </>
             );
           })()}
         </div>
