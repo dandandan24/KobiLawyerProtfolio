@@ -1,66 +1,11 @@
 'use client';
 
 import Image from "next/image";
-import { useState } from "react";
 import { useScrollAnimation } from "./components/ScrollAnimationProvider";
 
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const { animatedElements } = useScrollAnimation();
 
-  const recommendations = [
-    {
-      name: "דוד לוי",
-      company: "חברת לוי בע&ldquo;מ",
-      text: "עו&ldquo;ד קובי סייע לנו בפתרון סכסוך מורכב בצורה מקצועית ואפקטיבית."
-    },
-    {
-      name: "שרה כהן",
-      company: "עצמאית",
-      text: "הטיפול היה מקצועי, אדיב ומעל לכל - אפקטיבי. ממליצה בחום!"
-    },
-    {
-      name: "יוסי ישראלי",
-      company: "ישראלי ושות&rsquo;",
-      text: "ניסיון רב וידע מעמיק בתחום. פתר את הבעיה במהירות ובמקצועיות."
-    },
-    {
-      name: "מיכל רוזן",
-      company: "רוזן ושות&rsquo;",
-      text: "שירות מעולה ומקצועי. עו&ldquo;ד קובי פתר לנו בעיה מורכבת במהירות."
-    },
-    {
-      name: "אבי כהן",
-      company: "חברת כהן בע&ldquo;מ",
-      text: "מקצועיות ברמה הגבוהה ביותר. ממליץ בחום לכל מי שצריך עו&ldquo;ד טוב."
-    },
-    {
-      name: "דנה לוי",
-      company: "עו&ldquo;ד עצמאית",
-      text: "עבודה מדויקת ומקצועית. עו&ldquo;ד קובי הוא אחד העורכי הדין הטובים בתחום."
-    }
-  ];
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex + 1 >= recommendations.length ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex - 1 < 0 ? recommendations.length - 1 : prevIndex - 1
-    );
-  };
-
-  const getVisibleRecommendations = () => {
-    const visible = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentIndex + i) % recommendations.length;
-      visible.push(recommendations[index]);
-    }
-    return visible;
-  };
 
   return (
     <div className="font-sans" dir="rtl">
@@ -195,63 +140,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* Section 5: Recommendations Section - 40% screen height */}
-      <section className="h-[50vh] md:h-[50vh] sm:h-auto py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className={`text-3xl md:text-3xl sm:text-2xl font-bold text-gray-800 text-center mb-12 fade-in-up ${animatedElements.has('recommendations-title') ? 'visible' : ''}`} data-animate-id="recommendations-title">המלצות לקוחות</h2>
-          
-          {/* Carousel Container */}
-          <div className="relative">
-            {/* Navigation Buttons */}
-            <button 
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-transparent text-gray-600 p-3 rounded-full hover:text-gray-800 transition-all duration-300 z-10 md:bg-white md:text-gray-800 md:hover:bg-gray-800 md:hover:text-white md:shadow-lg md:hover:shadow-xl md:border-2 md:border-gray-800 md:hover:scale-105"
-              style={{ top: 'calc(50% - 20px)' }}
-              aria-label="Previous recommendations"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button 
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-transparent text-gray-600 p-3 rounded-full hover:text-gray-800 transition-all duration-300 z-10 md:bg-white md:text-gray-800 md:hover:bg-gray-800 md:hover:text-white md:shadow-lg md:hover:shadow-xl md:border-2 md:border-gray-800 md:hover:scale-105"
-              style={{ top: 'calc(50% - 20px)' }}
-              aria-label="Next recommendations"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            {/* Recommendations Display */}
-            <div className="flex gap-8 justify-center flex-col sm:flex-row">
-              {getVisibleRecommendations().map((rec, index) => (
-                <div key={index} className={`bg-gray-50 p-6 rounded-lg max-w-xs text-center mx-auto sm:mx-0 ${index > 0 ? 'hidden sm:block' : ''}`}>
-                  <p className="text-gray-600 mb-4 italic md:text-base sm:text-sm">"{rec.text}"</p> {/* eslint-disable-line react/no-unescaped-entities */}
-                  <h4 className="font-semibold text-gray-800 md:text-base sm:text-sm">{rec.name}</h4>
-                  <p className="text-gray-500 text-sm sm:text-xs">{rec.company}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-8 gap-2">
-              {recommendations.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    currentIndex === index ? 'bg-gray-800' : 'bg-gray-300'
-                  }`}
-                  aria-label={`Go to recommendation ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Recommendations Section removed */}
     </div>
   );
 }

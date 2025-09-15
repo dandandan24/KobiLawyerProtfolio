@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { David_Libre } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { ScrollAnimationProvider } from "./components/ScrollAnimationProvider";
 import { PageTransition } from "./components/PageTransition";
 
@@ -41,32 +42,7 @@ export default function RootLayout({
           <Navbar />
           <PageTransition>
             {children}
-            
-            {/* Footer */}
-            <footer className="bg-gray-800 text-white py-12">
-              <div className="max-w-7xl mx-auto px-6 text-center">
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4">עו&ldquo;ד קובי רוזנברג</h3>
-                  <p className="text-gray-300">משפט אזרחי ומסחרי</p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                  <div>
-                    <h4 className="font-semibold mb-2">צור קשר</h4>
-                    <p className="text-gray-300">טלפון: 03-5609697</p>
-                    <p className="text-gray-300">אימייל: kobi@rosenberg-law.co.il</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">כתובת</h4>
-                    <p className="text-gray-300">מידטאון, דרך מנחם בגין 144, קומה 36</p>
-                    <p className="text-gray-300">תל אביב, ישראל</p>
-                  </div>
-                
-                </div>
-                <div className="border-t border-gray-700 pt-8">
-                  <p className="text-gray-400">&copy; 2025 עו&ldquo;ד קובי רוזנברג. כל הזכויות שמורות.</p>
-                </div>
-              </div>
-            </footer>
+            <Footer />
           </PageTransition>
         </ScrollAnimationProvider>
       </body>
