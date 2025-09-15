@@ -21,7 +21,7 @@ export default function Home() {
 
       {/* Section 2: About Section - 100% screen height */}
       <section className="min-h-[80vh] py-20 bg-gray-50">
-        <div className="w-full 2xl:px-20 xl:px-10 px-8 md:px-0 flex flex-col md:flex-row gap-8 md:gap-32 sm:gap-4">
+        <div className="w-full 2xl:px-20 xl:px-10 px-8 md:px-8 lg:px-8 xl:px-10 flex flex-col md:flex-row gap-8 md:gap-32 sm:gap-4">
           {/* Text content - 60% width */}
           <div className={`flex-1 pt-0 fade-in-up sm:max-w-full sm:overflow-hidden ${animatedElements.has('about') ? 'visible' : ''}`} data-animate-id="about">
             <h2 className="text-4xl md:text-4xl sm:text-3xl font-bold text-gray-800 mb-6 text-center md:text-right">אודות המשרד</h2>
