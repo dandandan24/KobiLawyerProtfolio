@@ -11,8 +11,8 @@ export default function Home() {
   const recommendations = [
     {
       name: "דוד לוי",
-      company: "חברת לוי בע\"מ",
-      text: "עו\"ד קובי סייע לנו בפתרון סכסוך מורכב בצורה מקצועית ואפקטיבית."
+      company: "חברת לוי בע&ldquo;מ",
+      text: "עו&ldquo;ד קובי סייע לנו בפתרון סכסוך מורכב בצורה מקצועית ואפקטיבית."
     },
     {
       name: "שרה כהן",
@@ -21,23 +21,23 @@ export default function Home() {
     },
     {
       name: "יוסי ישראלי",
-      company: "ישראלי ושות'",
+      company: "ישראלי ושות&rsquo;",
       text: "ניסיון רב וידע מעמיק בתחום. פתר את הבעיה במהירות ובמקצועיות."
     },
     {
       name: "מיכל רוזן",
-      company: "רוזן ושות'",
-      text: "שירות מעולה ומקצועי. עו\"ד קובי פתר לנו בעיה מורכבת במהירות."
+      company: "רוזן ושות&rsquo;",
+      text: "שירות מעולה ומקצועי. עו&ldquo;ד קובי פתר לנו בעיה מורכבת במהירות."
     },
     {
       name: "אבי כהן",
-      company: "חברת כהן בע\"מ",
-      text: "מקצועיות ברמה הגבוהה ביותר. ממליץ בחום לכל מי שצריך עו\"ד טוב."
+      company: "חברת כהן בע&ldquo;מ",
+      text: "מקצועיות ברמה הגבוהה ביותר. ממליץ בחום לכל מי שצריך עו&ldquo;ד טוב."
     },
     {
       name: "דנה לוי",
-      company: "עו\"ד עצמאית",
-      text: "עבודה מדויקת ומקצועית. עו\"ד קובי הוא אחד העורכי הדין הטובים בתחום."
+      company: "עו&ldquo;ד עצמאית",
+      text: "עבודה מדויקת ומקצועית. עו&ldquo;ד קובי הוא אחד העורכי הדין הטובים בתחום."
     }
   ];
 
@@ -67,7 +67,7 @@ export default function Home() {
       {/* Section 1: Hero Section - Full height on mobile, 70% on desktop */}
       <section className="h-screen md:h-[70vh] relative flex items-center justify-center bg-cover bg-center bg-no-repeat -mt-[73px] pt-[73px]" style={{ backgroundImage: "url('/HomePageBackGround.jpeg')" }}>
         <div className={`text-center text-white z-10 fade-in-up ${animatedElements.has('hero') ? 'visible' : ''}`} data-animate-id="hero">
-          <h1 className="text-5xl md:text-5xl sm:text-3xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">עו"ד קובי רוזנברג</h1>
+          <h1 className="text-5xl md:text-5xl sm:text-3xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">עו&ldquo;ד קובי רוזנברג</h1>
           <p className="text-xl md:text-xl sm:text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"> משפט אזרחי ומסחרי</p>
         </div>
         {/* Background overlay for better text readability */}

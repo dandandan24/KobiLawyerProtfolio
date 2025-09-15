@@ -99,7 +99,7 @@ export default function PracticeAreas() {
             {/* Picture - Right side */}
             <div className="w-full lg:w-1/2 flex justify-center">
               <div className="w-full max-w-md lg:max-w-lg h-96 bg-gray-300 rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-gray-600 text-lg">תמונה של עו"ד קובי בעבודה</span>
+                <span className="text-gray-600 text-lg">תמונה של עו&ldquo;ד קובי בעבודה</span>
               </div>
             </div>
           </div>
