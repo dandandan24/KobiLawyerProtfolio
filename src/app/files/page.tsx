@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface FileItem {
   id: number;
@@ -13,6 +13,8 @@ interface FileItem {
 export default function Files() {
   const [selectedFile, setSelectedFile] = useState<FileItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   
 
   const files: FileItem[] = [
@@ -20,7 +22,7 @@ export default function Files() {
       id: 1,
       title: " אילן ששון נגד דוד וצורי בעמ",
       description: "דחיית התנגדות לביצוע שטר בשל חוסר תום לב והגנת בדים של החייב",
-      fileName: "file1.pdf.html",
+      fileName: "file1.pdf",
       category: "contracts"
     },
     {
@@ -198,6 +200,23 @@ export default function Files() {
     setSelectedFile(null);
   };
 
+  // Detect mobile by viewport width only on client
+  useEffect(() => {
+    const updateIsMobile = () => setIsMobile(window.innerWidth < 768);
+    updateIsMobile();
+    window.addEventListener('resize', updateIsMobile);
+    return () => window.removeEventListener('resize', updateIsMobile);
+  }, []);
+
+  // Show scroll-to-top button on mobile after scrolling down a bit
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <div className="font-sans" dir="rtl">
       {/* Hero Section */}
@@ -208,6 +227,19 @@ export default function Files() {
         </div>
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
+
+      {/* Scroll To Top - Mobile Only */}
+      {!isModalOpen && showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="חזרה למעלה"
+          className="md:hidden fixed bottom-6 left-6 z-40 bg-gray-800 text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center active:scale-95"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+            <path fillRule="evenodd" d="M12 4.5a.75.75 0 01.53.22l6 6a.75.75 0 11-1.06 1.06L12.75 6.81V19.5a.75.75 0 01-1.5 0V6.81L6.53 11.78a.75.75 0 11-1.06-1.06l6-6a.75.75 0 01.53-.22z" clipRule="evenodd" />
+          </svg>
+        </button>
+      )}
 
       {/* Files Section */}
       <section className="py-16 bg-gray-50">
@@ -259,11 +291,40 @@ export default function Files() {
           </button>
           
           {/* Document Viewer - Full Screen */}
-          <iframe
-            src={`/files/${selectedFile.fileName}`}
-            className="w-full h-full"
-            title={selectedFile.title}
-          />
+          {(() => {
+            const filePath = `/files/${selectedFile.fileName}`;
+            if (isMobile) {
+              // Mobile fallback: many mobile browsers (especially iOS Safari) block inline PDF rendering.
+              return (
+                <div className="w-full h-full flex flex-col items-center justify-center gap-6 px-6 text-center">
+                  <p className="text-white text-lg">צפייה ב-PDF במובייל נתמכת בלשונית חדשה.</p>
+                  <a
+                    href={filePath}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 bg-white text-black rounded-lg font-semibold shadow hover:bg-gray-100"
+                  >
+                    פתיחה בלשונית חדשה
+                  </a>
+                  <a
+                    href={filePath}
+                    download
+                    className="px-6 py-3 bg-transparent border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-black"
+                  >
+                    הורדה
+                  </a>
+                </div>
+              );
+            }
+            // Desktop: default browser PDF viewer
+            return (
+              <iframe
+                src={`${filePath}#toolbar=1&navpanes=1&scrollbar=1&view=FitH`}
+                className="w-full h-full"
+                title={selectedFile.title}
+              />
+            );
+          })()}
         </div>
       )}
     </div>
