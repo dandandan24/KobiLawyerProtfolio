@@ -57,7 +57,7 @@ export default function RootLayout({
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">כתובת</h4>
-                    <p className="text-gray-300">מידטאון, דרך מנחם בגין 144</p>
+                    <p className="text-gray-300">מידטאון, דרך מנחם בגין 144, קומה 36</p>
                     <p className="text-gray-300">תל אביב, ישראל</p>
                   </div>
                 

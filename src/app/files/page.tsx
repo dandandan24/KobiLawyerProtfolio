@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface FileItem {
   id: number;
@@ -13,64 +13,7 @@ interface FileItem {
 export default function Files() {
   const [selectedFile, setSelectedFile] = useState<FileItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [countersStarted, setCountersStarted] = useState(false);
-  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
-  const [isFadingOut, setIsFadingOut] = useState(false);
-
-  // Counter animation function
-  const animateCounter = (elementId: string, targetValue: number, duration: number = 2000) => {
-    const element = document.getElementById(elementId);
-    if (!element) return;
-
-    const startTime = Date.now();
-    const startValue = 0;
-
-    const updateCounter = () => {
-      const currentTime = Date.now();
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentValue = Math.floor(startValue + (targetValue - startValue) * easeOutQuart);
-      
-      element.textContent = currentValue.toString();
-      
-      if (progress < 1) {
-        requestAnimationFrame(updateCounter);
-      } else {
-        element.textContent = targetValue.toString();
-      }
-    };
-
-    requestAnimationFrame(updateCounter);
-  };
-
-  // Start counters when component mounts
-  useEffect(() => {
-    if (!countersStarted) {
-      setCountersStarted(true);
-      
-      // Start all counters with slight delays
-      setTimeout(() => animateCounter('experience-counter', 30), 500);
-      setTimeout(() => animateCounter('cases-counter', 100), 1000);
-      setTimeout(() => animateCounter('success-counter', 90), 1500);
-    }
-  }, [countersStarted]);
-
-  // Hide scroll indicator when scrolling down
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) { // Hide after scrolling 100px
-        setIsFadingOut(true);
-      } else {
-        setIsFadingOut(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  
 
   const files: FileItem[] = [
     {
@@ -152,45 +95,7 @@ export default function Files() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
-          {/* Statistics Section */}
-          <div className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-white" id="experience-counter">0</div>
-                </div>
-                <div className="text-lg text-gray-600">שנות ניסיון</div>
-              </div>
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-white" id="cases-counter">0</div>
-                </div>
-                <div className="text-lg text-gray-600">תיקים שנסגרו</div>
-              </div>
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-white" id="success-counter">0</div>
-                </div>
-                <div className="text-lg text-gray-600">אחוזי הצלחה</div>
-              </div>
-            </div>
-            
-            {/* Scroll Indicator */}
-            <div 
-              className={`text-center mt-8 transition-all duration-500 ${
-                isFadingOut 
-                  ? 'opacity-0 -translate-y-4 pointer-events-none' 
-                  : 'opacity-100 translate-y-0'
-              }`}
-            >
-              <p className="text-xl font-semibold text-gray-800 mb-4">לעיון בפסקי הדין</p>
-              <div className="animate-bounce">
-                <svg className="w-8 h-8 text-gray-800 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Files Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

@@ -79,14 +79,14 @@ export default function Home() {
         <div className="w-full 2xl:px-20 xl:px-10 flex items-center gap-32">
           {/* Text content - 60% width */}
           <div className={`flex-1 pt-0 fade-in-up ${animatedElements.has('about') ? 'visible' : ''}`} data-animate-id="about">
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">אודותיי</h2>
-            <p className="text-xl text-gray-600 leading-relaxed mb-4 text-justify">
-            עו"ד קובי רוזנברג בעל תואר ראשון במשפטים (LLB) מאוניברסיטת תל אביב וחבר לשכת עורכי הדין משנת 1995.<br></br>
-המשרד הנו משרד בוטיק ותחומי עיסוקו המרכזיים כוללים ליטיגציה אזרחית – מסחרית, נדל"ן, חוזים מסחריים, גבייה והוצאה לפועל.<br></br>
-כל לקוח זוכה לטיפול פרטני, תוך הקפדה על פרטים, מחויבות בלתי מתפשרת ללקוח והתוויית אסטרטגיה מותאמת אישית ללקוח.<br></br>
-תפיסתו המקצועית של קובי מושתתת על יסודיות, הכנה משפטית קפדנית, זמינות גבוהה ויחס אישי ללקוח. קובי שואף לפתור סכסוכים משפטיים מחוץ לכתליי בית המשפט, אך לא יהסס לנקוט בכל הליך משפטי נדרש כדי לשמור על האינטרסים של לקוחותיו. הוא שם דגש על תוצאה מיטבית ללקוח – בין כתוצאה מהליך משפטי בבית משפט, בבוררות או בגישור – בין אם במסגרת ייעוץ עסקי, ובין טיפול בעסקאות נדל"ן מורכבות או בהליכי גבייה סבוכים.<br></br>
-קובי מעמיד לרשות לקוחותיו רמה מקצועית גבוהה, אמינות, דיסקרטיות, והיכרות עמוקה עם מכלול הרבדים המשפטיים, העסקיים והאנושיים של כל תיק. ניסיונו ומחויבותו ללקוח מהווים בסיס איתן להשגת פתרונות יציבים וארוכי טווח לכל לקוח ולכל אתגר.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">אודות המשרד</h2>
+            <ul className="text-xl text-gray-600 leading-relaxed mb-4 text-justify list-disc pr-6">
+              <li>המשרד הנו משרד בוטיק ותחומי עיסוקו המרכזיים כוללים ליטיגציה אזרחית – מסחרית, נדל"ן, חוזים מסחריים, גבייה והוצאה לפועל.</li><br></br>
+              <li>עו"ד קובי רוזנברג בעל תואר ראשון במשפטים (LLB) מאוניברסיטת תל אביב וחבר לשכת עורכי הדין משנת 1995.</li><br></br>
+              <li>כל לקוח זוכה לטיפול פרטני, תוך הקפדה על פרטים, מחויבות בלתי מתפשרת  והתוויית אסטרטגיה מותאמת אישית.</li><br></br>
+              <li>תפיסתו המקצועית של קובי מושתתת על יסודיות, הכנה משפטית קפדנית, זמינות גבוהה ויחס אישי ללקוח.</li><br></br>
+              <li>קובי מעמיד לרשות לקוחותיו רמה מקצועית גבוהה, אמינות, דיסקרטיות, והיכרות עמוקה עם מכלול הרבדים המשפטיים, העסקיים והאנושיים של כל תיק. ניסיונו ומחויבותו ללקוח מהווים בסיס איתן להשגת פתרונות יציבים וארוכי טווח לכל לקוח ולכל אתגר.</li>
+            </ul>
           </div>
           {/* Picture - 40% width, 60% height */}
           <div className="flex-1 flex justify-center">
@@ -103,33 +103,50 @@ export default function Home() {
       </section>
 
       {/* Section 3: Specialities Section - 60% screen height */}
-      <section className="h-[80vh] py-20 bg-gray-800">
+      <section className="h-[90vh] py-20 bg-gray-800">
                     <div className="max-w-7xl mx-auto px-6 text-center">
-              <h2 className={`text-4xl font-bold text-white mb-16 fade-in-up ${animatedElements.has('specialities-title') ? 'visible' : ''}`} data-animate-id="specialities-title">תחומי התמחות</h2>
-          <div className="grid grid-cols-3 2xl:gap-36 gap-12">
-            {/* 6 speciality items */}
-                  {[
-                    { title: "יישוב סכסוכים וליטיגציה", description: "ייצוג  בהתדיינויות אזרחיות ומסחריות בבתי משפט", svg: "/conflictssolving.svg" },
-                    { title: "משפט מסחרי", description: "ליווי וייעוץ שוטף לחברות שונות בכל תחומי המשפט המסחרי", svg: "/commercial.svg" },
-                    { title: "נדל״ן", description: "עריכת הסכמי מכר, שכירות, משכנתאות, הלוואות", svg: "/realestate.svg" },
-                    { title: "גבייה והוצאה לפועל", description: "גביה וניהול הליכי הוצאה לפועל עבור פרטים וחברות", svg: "/gvia.svg" },
-                    { title: "העברה בין דורית ושירותי נוטריון", description: "עריכת צוואות, יפוי כח מתמשך, הסכמים בין יורשים, נאמנויות ומתן שירותים נוטריונים.", svg: "/contract.svg" },
-                    { title: "דיני מקרקעין", description: "משפט שמתאר את העיסוק בכל תחום", svg: "/property.svg" }
-                  ].map((item, index) => (
-                    <div 
-                      key={index} 
-                      className={`text-center fade-in-up ${animatedElements.has(`speciality-${index}`) ? 'visible' : ''}`} 
-                      data-animate-id={`speciality-${index}`}
-                      style={{ animationDelay: `${index * 0.2}s` }}
-                    >
-                      <div className="w-20 h-20 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <img src={item.svg} alt={`${item.title} Icon`} className="w-10 h-10 text-gray-800" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                      <p className="text-white">{item.description}</p>
+              <h2 className={`text-4xl font-bold text-white mb-10 fade-in-up ${animatedElements.has('specialities-title') ? 'visible' : ''}`} data-animate-id="specialities-title">תחומי התמחות</h2>
+              {/* Pyramid layout: 2 items above 3, aligned over gaps */}
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-y-8 gap-x-4 md:gap-y-10 md:gap-x-6">
+                {/* Top row: columns 2 and 4 */}
+                {[
+                  { title: "יישוב סכסוכים וליטיגציה", description: "ייצוג  בהתדיינויות אזרחיות ומסחריות בבתי משפט", svg: "/conflictssolving.svg" },
+                  { title: "משפט מסחרי", description: "ליווי וייעוץ שוטף לחברות שונות בכל תחומי המשפט המסחרי", svg: "/commercial.svg" },
+                ].map((item, index) => (
+                  <div
+                    key={`top-${index}`}
+                    className={`text-center fade-in-up md:row-start-1 ${index === 0 ? 'md:col-start-2' : 'md:col-start-4'} ${animatedElements.has(`speciality-top-${index}`) ? 'visible' : ''}`}
+                    data-animate-id={`speciality-top-${index}`}
+                    style={{ animationDelay: `${index * 0.2}s` }}
+                  >
+                    <div className="w-20 h-20 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <img src={item.svg} alt={`${item.title} Icon`} className="w-10 h-10 text-gray-800" />
                     </div>
-                  ))}
-          </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                    <p className="text-white">{item.description}</p>
+                  </div>
+                ))}
+
+                {/* Bottom row: columns 1, 3, 5 */}
+                {[
+                  { title: "נדל״ן", description: "עריכת הסכמי מכר, שכירות, משכנתאות, הלוואות", svg: "/realestate.svg" },
+                  { title: "העברה בין דורית ושירותי נוטריון", description: "עריכת צוואות, יפוי כח מתמשך, הסכמים בין יורשים, נאמנויות ומתן שירותים נוטריונים.", svg: "/contract.svg" },
+                  { title: "גבייה והוצאה לפועל", description: "גביה וניהול הליכי הוצאה לפועל עבור פרטים וחברות", svg: "/gvia.svg" },
+                ].map((item, index) => (
+                  <div
+                    key={`bottom-${index}`}
+                    className={`text-center fade-in-up md:row-start-2 ${index === 0 ? 'md:col-start-1' : index === 1 ? 'md:col-start-3' : 'md:col-start-5'} ${animatedElements.has(`speciality-bottom-${index}`) ? 'visible' : ''}`}
+                    data-animate-id={`speciality-bottom-${index}`}
+                    style={{ animationDelay: `${(index + 2) * 0.2}s` }}
+                  >
+                    <div className="w-20 h-20 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <img src={item.svg} alt={`${item.title} Icon`} className="w-10 h-10 text-gray-800" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                    <p className="text-white">{item.description}</p>
+                  </div>
+                ))}
+              </div>
         </div>
       </section>
 

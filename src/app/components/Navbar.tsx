@@ -14,7 +14,6 @@ const Navbar = () => {
     { title: "נדל״ן", href: "/practice-areas/torts" },
     { title: "גבייה והוצאה לפועל", href: "/practice-areas/commercial-law" },
     { title: "צוואות ויפוי כח מתמשך", href: "/practice-areas/family-law" },
-    { title: "דיני מקרקעין", href: "/practice-areas/real-estate" }
   ];
 
   const isActive = (path: string) => pathname === path;

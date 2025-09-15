@@ -111,13 +111,11 @@ export default function Contact() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-800 focus:border-transparent transition-all duration-200 text-gray-800"
                     >
                       <option value="">בחר נושא</option>
-                      <option value="contracts">דיני חוזים</option>
-                      <option value="labor-law">דיני עבודה</option>
-                      <option value="torts">נזיקין</option>
-                      <option value="commercial-law">משפט מסחרי</option>
-                      <option value="family-law">דיני משפחה</option>
-                      <option value="real-estate">דיני מקרקעין</option>
-                      <option value="other">אחר</option>
+                      <option value="/practice-areas/contracts">יישוב סכסוכים וליטיגציה</option>
+                      <option value="/practice-areas/labor-law">משפט מסחרי</option>
+                      <option value="/practice-areas/torts">נדל״ן</option>
+                      <option value="/practice-areas/commercial-law">גבייה והוצאה לפועל</option>
+                      <option value="/practice-areas/family-law">צוואות ויפוי כח מתמשך</option>
                     </select>
                   </div>
                 </div>
@@ -173,7 +171,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">כתובת</p>
-                    <p className="text-gray-600">מידטאון, דרך מנחם בגין 144, תל אביב</p>
+                    <p className="text-gray-600">מידטאון, דרך מנחם בגין 144, תל אביב, קומה 36</p>
                   </div>
                 </div>
                 
@@ -201,7 +199,7 @@ export default function Contact() {
                     <span className="text-white text-sm">✉️</span>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-800">אימייל</p>
+                    <p className="font-medium text-gray-800">דוא״ל</p>
                     <p className="text-gray-600">kobi@rosenberg-law.co.il</p>
                   </div>
                 </div>

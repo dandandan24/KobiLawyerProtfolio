@@ -13,10 +13,10 @@ export default function CommercialLawPage() {
 
       {/* Main Content */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto 2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
+        <div className="2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-start gap-0 lg:gap-0">
             {/* Text content - Left side */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-2/5 ml-30 mr-10">
               <h2 className="text-4xl font-bold text-gray-800 mb-6">מומחיות בגבייה והוצאה לפועל</h2>
               
               <div className="space-y-4 lg:space-y-6">
@@ -31,13 +31,13 @@ export default function CommercialLawPage() {
             </div>
             
             {/* Picture - Right side */}
-            <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="lg:w-3/5 flex justify-center">
             <Image
-                src="/realestate.jpeg"
+                src="/specialitisimages/collecting.png"
                 alt="realestate"
-                width={500}
-                height={384}
-                className="w-auto 2xl:h-[650px] h-[600px] object-cover rounded-lg shadow-lg"
+                width={1000}
+                height={1000}
+                className="w-full max-w-[380px] h-auto object-cover rounded-lg"
                 priority
               />           
             </div>
@@ -80,12 +80,7 @@ export default function CommercialLawPage() {
             >
               צוואות ויפוי כח מתמשך
             </a>
-            <a 
-              href="/practice-areas/real-estate" 
-              className="px-6 py-3 bg-white text-gray-800 rounded-lg font-medium border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 text-lg"
-            >
-              דיני מקרקעין
-            </a>
+            
           </div>
         </div>
       </section>
