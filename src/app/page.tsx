@@ -81,8 +81,8 @@ export default function Home() {
           <div className={`flex-1 pt-0 fade-in-up sm:max-w-full sm:overflow-hidden ${animatedElements.has('about') ? 'visible' : ''}`} data-animate-id="about">
             <h2 className="text-4xl md:text-4xl sm:text-3xl font-bold text-gray-800 mb-6 text-center md:text-right">אודות המשרד</h2>
             <ul className="text-xl md:text-xl sm:text-lg text-gray-600 leading-relaxed mb-4 text-justify md:text-justify sm:text-justify md:list-disc sm:list-none xl:pr-6" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-              <li>המשרד הנו משרד בוטיק ותחומי עיסוקו המרכזיים כוללים ליטיגציה אזרחית – מסחרית, נדל"ן, חוזים מסחריים, גבייה והוצאה לפועל.</li><br></br>
-              <li>עו"ד קובי רוזנברג בעל תואר ראשון במשפטים (LLB) מאוניברסיטת תל אביב וחבר לשכת עורכי הדין משנת 1995.</li><br></br>
+              <li>המשרד הנו משרד בוטיק ותחומי עיסוקו המרכזיים כוללים ליטיגציה אזרחית – מסחרית, נדל&ldquo;ן, חוזים מסחריים, גבייה והוצאה לפועל.</li><br></br>
+              <li>עו&ldquo;ד קובי רוזנברג בעל תואר ראשון במשפטים (LLB) מאוניברסיטת תל אביב וחבר לשכת עורכי הדין משנת 1995.</li><br></br>
               <li>כל לקוח זוכה לטיפול פרטני, תוך הקפדה על פרטים, מחויבות בלתי מתפשרת  והתוויית אסטרטגיה מותאמת אישית.</li><br></br>
               <li>תפיסתו המקצועית של קובי מושתתת על יסודיות, הכנה משפטית קפדנית, זמינות גבוהה ויחס אישי ללקוח.</li><br></br>
               <li>קובי מעמיד לרשות לקוחותיו רמה מקצועית גבוהה, אמינות, דיסקרטיות, והיכרות עמוקה עם מכלול הרבדים המשפטיים, העסקיים והאנושיים של כל תיק. ניסיונו ומחויבותו ללקוח מהווים בסיס איתן להשגת פתרונות יציבים וארוכי טווח לכל לקוח ולכל אתגר.</li>
