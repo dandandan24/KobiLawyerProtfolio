@@ -6,7 +6,7 @@ export default function ContractsPage() {
       {/* Hero Section */}
       <section className="h-[40vh] relative flex items-center justify-center" style={{ backgroundImage: "url('/Skyline.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="text-center text-white z-10">
-          <h1 className="text-5xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">יישוב סכסוכים וליטיגציה</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">יישוב סכסוכים וליטיגציה</h1>
         </div>
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
