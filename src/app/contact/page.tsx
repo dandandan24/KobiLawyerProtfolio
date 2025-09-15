@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,6 +10,27 @@ export default function Contact() {
     subject: '',
     message: ''
   });
+
+  const [textareaRows, setTextareaRows] = useState(12);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setTextareaRows(2);
+      } else {
+        setTextareaRows(12);
+      }
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -130,7 +151,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    rows={12}
+                    rows={textareaRows}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-800 focus:border-transparent transition-all duration-200 resize-none text-gray-800 placeholder-gray-500"
                     placeholder="תאר את הבעיה או השאלה שלך"
                   />

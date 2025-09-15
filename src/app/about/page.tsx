@@ -4,14 +4,29 @@ export default function About() {
   return (
     <div className="font-sans" dir="rtl">
       {/* About Section - Full screen height minus navbar */}
-      <section className="h-[calc(112vh-60px)] bg-gray-50">
-        <div className="w-full h-full flex flex-col lg:flex-row items-stretch gap-16">
+      <section className="min-h-[calc(112vh-60px)] bg-gray-50">
+        <div className="w-full min-h-full flex flex-col lg:flex-row items-stretch gap-16">
+          {/* Mobile: Image at top, 60% screen height, full width */}
+          <div className="lg:hidden w-full h-[60vh]">
+            <Image
+              src="/971A3651.jpg"
+              alt="Attorney Kobi Rosenberg"
+              width={1000}
+              height={1000}
+              className="w-full h-full object-cover"
+              priority
+              style={{
+                boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.5)',
+              }}
+            />
+          </div>
+
           {/* Text content - Expanded with more details */}
-          <div className="flex-1 lg:p-12 -mt-5">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 lg:mb-6">אודותיי</h1>
+          <div className="flex-1 lg:p-12 -mt-5 lg:mt-0 lg:h-full">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 lg:mb-6 text-center lg:text-right">אודותיי</h1>
             
-            <div className="space-y-4 lg:space-y-6">
-            <p className="xl:text-md 2xl:text-lg text-gray-600 leading-relaxed mb-4 text-justify">
+            <div className="space-y-4 lg:space-y-6 px-6 lg:px-0 lg:h-[calc(100%-4rem)] lg:overflow-y-auto pb-8 lg:pb-0">
+            <p className="xl:text-md 2xl:text-lg text-gray-600 leading-relaxed mb-4 text-justify lg:text-justify sm:text-center" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
             תחומי עיסוקו המרכזיים של המשרד כוללים ליטיגציה אזרחית – מסחרית, בין השאר בסכסוכים עסקיים מורכבים ותובענות בין שותפים עסקיים, נדל"ן, חוזים מסחריים, גבייה והוצאה לפועל.<br></br>
 לאורך שלשה עשורים של פעילות מקצועית קובי הופיע במאות רבות של דיונים בבתי משפט בכל הערכאות, בבוררויות ובגישורים מגוונים, וצבר מיומנויות בבנייה והתוויה של אסטרטגיה משפטית, גיבוש וכתיבה של כתבי טענות יסודיים ומעמיקים, ניהול חקירות ודיונים והובלת תיקים מורכבים בסביבה דינמית ותחרותית, עד לקבלת תוצאה מיטבית ללקוחותיו.<br></br><br></br>
 בנוסף להופעותיו בפני טריבונלים שונים קובי מלווה עסקאות נדל"ן מגוונות; דירות, מגרשים ומשרדים ומוביל את לקוחותיו החל משלב המו"מ ועריכת חוזים, דרך טיפול בהיבטים רגולטוריים ומימוניים ועד לרישום זכויות והשלמת העסקאות.<br></br>
@@ -40,13 +55,14 @@ export default function About() {
                 <p className="text-sm lg:text-base text-gray-600">
                   - 30+ שנות ניסיון בעריכת דין<br/>
                   - טיפול במאות תיקים מורכבים<br/>
-                  - מומחיות במשפט האזרחי והמסחרי
+                  - מומחיות במשפט האזרחי והמסחרי
                 </p>
               </div>
             </div> */}
           </div>
-          {/* Picture - Full height minus navbar */}
-          <div className="flex-1 h-full">
+          
+          {/* Desktop: Picture - Full height minus navbar */}
+          <div className="hidden lg:flex flex-1 h-full">
             <Image
               src="/971A3651.jpg"
               alt="Attorney Kobi Rosenberg"

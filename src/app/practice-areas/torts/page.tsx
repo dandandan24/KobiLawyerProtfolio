@@ -16,12 +16,12 @@ export default function TortsPage() {
       <section className="py-16 bg-gray-50">
         <div className="2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-0 lg:gap-0">
-            {/* Text content - Left side */}
-            <div className="w-full lg:w-2/5 ml-30 mr-10">
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">מומחיות בנדל״ן</h2>
+            {/* Text content - Left side on desktop, above image on mobile */}
+            <div className="w-full lg:w-2/5 lg:ml-30 lg:mr-10">
+              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden lg:block">מומחיות בנדל״ן</h2>
               
-              <div className="space-y-4 lg:space-y-6">
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify">
+              <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
+                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
 משרדנו מתמחה בייצוג ובליווי משפטי במגוון רחב של עסקאות נדל"ן: בין אם מדובר בדירות מקבלן, דירת יד שניה, משרד, חנות, בניין או קרקע. נלווה אתכם בצורה מקצועית ואישית בכל שלבי העסקה. ננסח בשבילכם את הסכם הקנייה או המכירה, נבדוק עבורכם היבטים של מיסוי ונמליץ על דרך פעולה, נלווה אתכם מול הבנק בלקיחת המשכנתא ונרשום את זכויותיכם בטאבו או כל מרשם חוקי אחר (רמ"י, חברה משכנת, רישום פנימי שמתנהל אצל קבלן).
                 </p>
               </div>
@@ -29,9 +29,21 @@ export default function TortsPage() {
               {/* Services */}
              
             </div>
+
+            {/* Mobile: Image below text */}
+            <div className="lg:hidden w-full mt-6">
+              <Image
+                src="/specialitisimages/realestate.png"
+                alt="realestate"
+                width={1000}
+                height={1000}
+                className="w-full h-auto object-cover rounded-lg"
+                priority
+              />
+            </div>
             
-            {/* Picture - Right side */}
-            <div className="lg:w-3/5 flex justify-center">
+            {/* Picture - Right side (Desktop only) */}
+            <div className="hidden lg:flex lg:w-3/5 justify-center">
             <Image
                 src="/specialitisimages/realestate.png"
                 alt="realestate"
