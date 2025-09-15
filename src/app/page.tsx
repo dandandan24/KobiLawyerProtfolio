@@ -76,7 +76,7 @@ export default function Home() {
 
       {/* Section 2: About Section - 100% screen height */}
       <section className="min-h-[80vh] py-20 bg-gray-50">
-        <div className="w-full 2xl:px-20 xl:px-10 flex items-center gap-32">
+        <div className="w-full 2xl:px-20 xl:px-10 flex gap-32">
           {/* Text content - 60% width */}
           <div className={`flex-1 pt-0 fade-in-up ${animatedElements.has('about') ? 'visible' : ''}`} data-animate-id="about">
             <h2 className="text-4xl font-bold text-gray-800 mb-6">אודות המשרד</h2>
@@ -91,11 +91,11 @@ export default function Home() {
           {/* Picture - 40% width, 60% height */}
           <div className="flex-1 flex justify-center">
             <Image
-              src="/MichalAboutPIc.jpg"
+              src="/kobiHomePageAbout.jpg"
               alt="Attorney Kobi Rosenberg"
               width={1000}
               height={1000}
-              className="w-auto 2xl:h-[650px] h-[600] object-cover rounded-lg shadow-lg"
+              className="w-full 2xl:h-[650px] h-[600] object-cover rounded-lg shadow-xl"
               priority
             />
           </div>
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Specialities Section - 60% screen height */}
-      <section className="h-[90vh] py-20 bg-gray-800">
+      <section className="2xl:h-[70vh] xl:h-[90vh] py-20 bg-gray-800">
                     <div className="max-w-7xl mx-auto px-6 text-center">
               <h2 className={`text-4xl font-bold text-white mb-10 fade-in-up ${animatedElements.has('specialities-title') ? 'visible' : ''}`} data-animate-id="specialities-title">תחומי התמחות</h2>
               {/* Pyramid layout: 2 items above 3, aligned over gaps */}
