@@ -7,13 +7,13 @@ export default function About() {
       <section className="min-h-[calc(112vh-60px)] bg-gray-50">
         <div className="w-full min-h-full flex flex-col lg:flex-row items-stretch gap-16">
           {/* Mobile: Image at top, 60% screen height, full width */}
-          <div className="lg:hidden w-full h-[60vh] mb-0">
+          <div className="lg:hidden w-full h-[60vh] md:h-[70vh] mb-0">
             <Image
               src="/971A3651.jpg"
               alt="Attorney Kobi Rosenberg"
               width={1000}
               height={1000}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-top"
               priority
               style={{
                 boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.5)',

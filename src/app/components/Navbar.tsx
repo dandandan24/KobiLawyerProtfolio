@@ -43,16 +43,16 @@ const Navbar = () => {
         {/* Mobile Burger Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+          className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
           aria-label="Toggle mobile menu"
         >
-          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' md:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' md:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' md:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' lg:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' lg:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' lg:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
 
         {/* Desktop Navigation items on the right */}
-        <div className="hidden md:flex gap-20 mx-10">
+        <div className="hidden lg:flex gap-20 mx-10">
           <Link 
             href="/" 
             className={`text-xl font-bold text-gray-800 hover:text-gray-800 hover:underline hover:underline-offset-6 hover:decoration-gray-800 hover:decoration-2 transition-all duration-200 ${
@@ -132,7 +132,7 @@ const Navbar = () => {
             <img 
               src="/Logo.svg" 
               alt="Logo" 
-              className={`h-12 w-auto ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'brightness-100 invert-0' : 'brightness-0 invert') + ' md:brightness-100 md:invert-0' : ''}`} 
+              className={`h-12 w-auto ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'brightness-100 invert-0' : 'brightness-0 invert') + ' lg:brightness-100 lg:invert-0' : ''}`} 
             />
           </Link>
         </div>
@@ -140,7 +140,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[73px] bg-white z-40 shadow-lg transition-all duration-300">
+        <div className="lg:hidden fixed inset-0 top-[73px] bg-white z-40 shadow-lg transition-all duration-300">
           <div className="px-6 py-8 space-y-6 h-full overflow-y-auto">
             <Link 
               href="/" 

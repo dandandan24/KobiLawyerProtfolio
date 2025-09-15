@@ -21,10 +21,10 @@ export default function Home() {
 
       {/* Section 2: About Section - 100% screen height */}
       <section className="min-h-[80vh] py-20 bg-gray-50">
-        <div className="w-full 2xl:px-20 xl:px-10 px-8 md:px-8 lg:px-8 xl:px-10 flex flex-col md:flex-row gap-8 md:gap-32 sm:gap-4">
+        <div className="w-full 2xl:px-20 xl:px-10 px-8 md:px-8 lg:px-8 xl:px-10 flex flex-col lg:flex-row gap-8 lg:gap-32 sm:gap-4">
           {/* Text content - 60% width */}
           <div className={`flex-1 pt-0 fade-in-up sm:max-w-full sm:overflow-hidden ${animatedElements.has('about') ? 'visible' : ''}`} data-animate-id="about">
-            <h2 className="text-4xl md:text-4xl sm:text-3xl font-bold text-gray-800 mb-6 text-center md:text-right">אודות המשרד</h2>
+            <h2 className="text-4xl md:text-4xl sm:text-3xl font-bold text-gray-800 mb-6 text-center lg:text-right">אודות המשרד</h2>
             <ul className="text-xl md:text-xl sm:text-lg text-gray-600 leading-relaxed mb-4 text-justify md:text-justify sm:text-justify md:list-disc sm:list-none xl:pr-6" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
               <li>המשרד הנו משרד בוטיק ותחומי עיסוקו המרכזיים כוללים ליטיגציה אזרחית – מסחרית, נדל&ldquo;ן, חוזים מסחריים, גבייה והוצאה לפועל.</li><br></br>
               <li>עו&ldquo;ד קובי רוזנברג בעל תואר ראשון במשפטים (LLB) מאוניברסיטת תל אביב וחבר לשכת עורכי הדין משנת 1995.</li><br></br>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Specialities Section - 60% screen height */}
-      <section className="2xl:h-[70vh] xl:h-[90vh] md:h-[90vh] sm:h-auto py-20 bg-gray-800">
+      <section className="2xl:h-[70vh] xl:h-[90vh] md:h-[70vh] lg:h-[90vh] sm:h-auto py-20 bg-gray-800">
                     <div className="max-w-7xl mx-auto px-6 text-center">
               <h2 className={`text-4xl md:text-4xl sm:text-3xl font-bold text-white mb-10 fade-in-up ${animatedElements.has('specialities-title') ? 'visible' : ''}`} data-animate-id="specialities-title">תחומי התמחות</h2>
               {/* Pyramid layout: 2 items above 3, aligned over gaps */}

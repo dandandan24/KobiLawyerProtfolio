@@ -36,7 +36,7 @@ export default function CommercialLawPage() {
                 alt="collecting"
                 width={1000}
                 height={1000}
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-auto md:h-[200px] object-contain rounded-lg"
                 priority
               />
             </div>
