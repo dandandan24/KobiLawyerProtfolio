@@ -64,3 +64,62 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Always visible scrollbar styles */
+.always-visible-scrollbar {
+  scrollbar-width: thin !important;
+  scrollbar-color: #888 #f1f1f1 !important;
+  overflow-y: scroll !important;
+}
+
+.always-visible-scrollbar::-webkit-scrollbar {
+  width: 12px !important;
+  display: block !important;
+}
+
+.always-visible-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+  border-radius: 6px !important;
+  display: block !important;
+}
+
+.always-visible-scrollbar::-webkit-scrollbar-thumb {
+  background: #888 !important;
+  border-radius: 6px !important;
+  display: block !important;
+  min-height: 20px !important;
+}
+
+.always-visible-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555 !important;
+}
+
+/* Force scrollbar to always be visible */
+.always-visible-scrollbar {
+  overflow-y: scroll !important;
+  scrollbar-gutter: stable;
+}
+
+/* Additional styles to ensure scrollbar visibility */
+.always-visible-scrollbar {
+  /* Force scrollbar space to be reserved */
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* For WebKit browsers, ensure scrollbar is always visible */
+.always-visible-scrollbar::-webkit-scrollbar {
+  -webkit-appearance: none !important;
+  width: 12px !important;
+}
+
+.always-visible-scrollbar::-webkit-scrollbar:vertical {
+  width: 12px !important;
+}
+
+/* Ensure the scrollbar track is always visible */
+.always-visible-scrollbar::-webkit-scrollbar-track:vertical {
+  background: #f1f1f1 !important;
+  border-radius: 6px !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1) !important;
+}
