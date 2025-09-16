@@ -7,7 +7,7 @@ export default function About() {
       <section className="min-h-[calc(112vh-60px)] bg-gray-50">
         <div className="w-full min-h-full flex flex-col lg:flex-row items-stretch gap-16">
           {/* Mobile: Image at top, 60% screen height, full width */}
-          <div className="lg:hidden w-full h-[60vh] md:h-[70vh] mb-0">
+          <div className="lg:hidden w-full h-[60vh] md:h-[75vh] mb-0 ">
             <Image
               src="/971A3651.jpg"
               alt="Attorney Kobi Rosenberg"
@@ -25,8 +25,8 @@ export default function About() {
           <div className="flex-1 lg:p-12 -mt-5 lg:mt-0 lg:h-full">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 lg:mb-6 text-center lg:text-right">אודותיי</h1>
             
-            <div className="space-y-4 md:space-y-6 lg:space-y-6 px-6 lg:px-0 md:h-[90vh] md:overflow-y-scroll lg:h-[80vh] lg:overflow-y-scroll xl:h-[calc(90vh-60px)] xl:overflow-y-scroll pb-8 lg:pb-0">
-            <p className="text-xl md:text-xl lg:text-md xl:text-md 2xl:text-lg text-gray-600 leading-relaxed mb-4 text-justify lg:text-justify sm:text-center" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+            <div className="space-y-4   md:space-y-6 lg:space-y-6 px-6 lg:px-0 md:h-[90vh] md:overflow-y-scroll lg:h-[80vh] lg:overflow-y-scroll xl:h-[calc(90vh-60px)] xl:overflow-y-scroll pb-8 lg:pb-0 ipad-pro-px-8">
+            <p className="text-xl md:text-xl lg:text-md xl:text-md 2xl:text-lg ipad-pro-text-2xl text-gray-600 leading-relaxed mb-4 text-justify lg:text-justify sm:text-center" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
             תחומי עיסוקו המרכזיים של המשרד כוללים ליטיגציה אזרחית – מסחרית, בין השאר בסכסוכים עסקיים מורכבים ותובענות בין שותפים עסקיים, נדל&ldquo;ן, חוזים מסחריים, גבייה והוצאה לפועל.<br></br>
 לאורך שלשה עשורים של פעילות מקצועית קובי הופיע במאות רבות של דיונים בבתי משפט בכל הערכאות, בבוררויות ובגישורים מגוונים, וצבר מיומנויות בבנייה והתוויה של אסטרטגיה משפטית, גיבוש וכתיבה של כתבי טענות יסודיים ומעמיקים, ניהול חקירות ודיונים והובלת תיקים מורכבים בסביבה דינמית ותחרותית, עד לקבלת תוצאה מיטבית ללקוחותיו.<br></br><br></br>
 בנוסף להופעותיו בפני טריבונלים שונים קובי מלווה עסקאות נדל&ldquo;ן מגוונות; דירות, מגרשים ומשרדים ומוביל את לקוחותיו החל משלב המו&ldquo;מ ועריכת חוזים, דרך טיפול בהיבטים רגולטוריים ומימוניים ועד לרישום זכויות והשלמת העסקאות.<br></br>

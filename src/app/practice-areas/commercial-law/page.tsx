@@ -13,13 +13,13 @@ export default function CommercialLawPage() {
       {/* Main Content */}
       <section className="py-16 bg-gray-50">
         <div className="2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-start gap-0 lg:gap-0">
+          <div className="flex flex-col xl:flex-row items-start gap-0 xl:gap-0">
             {/* Text content - Left side on desktop, above image on mobile */}
-            <div className="w-full lg:w-2/5 lg:ml-30 lg:mr-10">
-              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden lg:block">גבייה והוצאה לפועל</h2>
+            <div className="w-full xl:w-2/5 xl:ml-30 xl:mr-10">
+              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden xl:block">גבייה והוצאה לפועל</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-center xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 גביה וניהול הליכי הוצל&ldquo;פ עבור פרטים וחברות, החל מפתיחת תיק ההוצאה לפועל דרך ניהול התדיינויות שונות בלשכת ההוצאה לפועל ובית המשפט והגעה להסדרי פשרה עם לקוחות, וכלה במימוש בפועל של נכסים.
 
                 </p>
@@ -30,7 +30,7 @@ export default function CommercialLawPage() {
             </div>
 
             {/* Mobile: Image below text */}
-            <div className="lg:hidden w-full mt-6">
+            <div className="xl:hidden w-full mt-6">
               <Image
                 src="/specialitisimages/collecting.png"
                 alt="collecting"
@@ -42,7 +42,7 @@ export default function CommercialLawPage() {
             </div>
             
             {/* Picture - Right side (Desktop only) */}
-            <div className="hidden lg:flex lg:w-3/5 justify-center">
+            <div className="hidden xl:flex xl:w-3/5 justify-center">
             <Image
                 src="/specialitisimages/collecting.png"
                 alt="collecting"

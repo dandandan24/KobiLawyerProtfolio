@@ -51,7 +51,7 @@ export default function PracticeAreas() {
       </section>
 
       {/* Main Speciality Section - 50% screen width layout */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 ipad-pro-portrait-h-60vh">
         <div className="w-full 2xl:px-20 xl:px-10 px-4">
           <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
             {/* Text content - Left side */}

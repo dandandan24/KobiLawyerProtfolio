@@ -5,6 +5,20 @@
   --foreground: #171717;
 }
 
+/* Ensure portrait 60vh overrides any earlier 70vh utility when both are present */
+@media (min-width: 1024px) and (max-width: 1370px) and (orientation: portrait) {
+  .ipad-pro-portrait-h-60vh { height: 60vh !important; }
+  .ipad-pro-portrait-h-50vh { height: 50vh !important; }
+}
+
+/* Ensure About text bump wins over other iPad Pro text utilities */
+@media (min-width: 1024px) and (max-width: 1370px) and (orientation: portrait) {
+  .ipad-pro-portrait-text-plus {
+    font-size: 1.875rem !important; /* even bigger (approx text-3xl) */
+    line-height: 2.375rem !important;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -122,4 +136,101 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
   background: #f1f1f1 !important;
   border-radius: 6px !important;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1) !important;
+}
+
+/* iPad Pro portrait (treat as mobile): override lg desktop utilities */
+@media (min-width: 1024px) and (max-width: 1370px) and (orientation: portrait) {
+  /* Make elements hidden only at lg visible again */
+  .lg\:hidden { display: initial !important; }
+  /* Also reveal xl-hidden elements on portrait tablet */
+  .xl\:hidden { display: initial !important; }
+
+  /* Prevent desktop-only blocks from showing */
+  .hidden.lg\:flex { display: none !important; }
+  .hidden.lg\:block { display: none !important; }
+  .hidden.xl\:flex { display: none !important; }
+  .hidden.xl\:block { display: none !important; }
+
+  /* Force flex direction back to column when lg tries to row */
+  .lg\:flex-row { flex-direction: column !important; }
+  /* Same for xl */
+  .xl\:flex-row { flex-direction: column !important; }
+
+  /* Optional: neutralize some lg spacing tweaks if present */
+  .lg\:p-12 { padding: inherit !important; }
+  .lg\:mt-0 { margin-top: inherit !important; }
+  .lg\:px-0 { padding-left: inherit !important; padding-right: inherit !important; }
+  .lg\:pb-0 { padding-bottom: inherit !important; }
+
+  /* Keep text centered instead of right-aligned in portrait */
+  .lg\:text-right { text-align: center !important; }
+  .xl\:text-right { text-align: center !important; }
+
+  /* Keep paragraphs centered instead of justified in portrait */
+  .lg\:text-justify { text-align: center !important; }
+  .xl\:text-justify { text-align: center !important; }
+
+  /* Specialities section: 60vh on iPad Pro portrait */
+  .ipad-pro-portrait-h-60vh { height: 60vh !important; }
+  /* About text: make paragraph slightly larger on iPad Pro portrait */
+  .ipad-pro-portrait-text-plus { font-size: 1.625rem !important; line-height: 2.1rem !important; }
+}
+
+/* iPad Pro landscape: force solid navbar like desktop */
+@media (min-width: 1024px) and (max-width: 1370px) and (orientation: landscape) {
+  .ipad-pro-landscape-solid {
+    background: #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  }
+  .ipad-pro-landscape-solid img {
+    filter: none !important;
+  }
+  /* Homepage Specialities: 60vh on iPad Pro landscape */
+  .ipad-pro-landscape-h-60vh { height: 60vh !important; }
+  /* Homepage Specialities: 70vh on iPad Pro landscape */
+  .ipad-pro-landscape-h-70vh { height: 70vh !important; }
+  /* Files modal: force mobile fallback / hide iframe on iPad Pro landscape */
+  .ipad-pro-landscape-force-show { display: flex !important; }
+  .ipad-pro-landscape-force-hide { display: none !important; }
+}
+
+/* iPad Pro (both orientations): utility to bump text size */
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .ipad-pro-text-bigger {
+    font-size: 1.375rem !important; /* slightly larger than text-xl */
+    line-height: 1.85 !important;
+  }
+  .ipad-pro-narrow {
+    max-width: 90% !important;
+  }
+  .ipad-pro-h-650 {
+    height: 650px !important;
+  }
+  .ipad-pro-flex-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .ipad-pro-h-70vh {
+    height: 70vh !important;
+  }
+  .ipad-pro-text-xl {
+    font-size: 1.25rem !important;   /* Tailwind text-xl */
+    line-height: 1.75rem !important; /* Tailwind leading-7 */
+  }
+  .ipad-pro-text-2xl {
+    font-size: 1.5rem !important;    /* Tailwind text-2xl */
+    line-height: 2rem !important;    /* Tailwind leading-8 */
+  }
+  .ipad-pro-px-8 {
+    padding-left: 2rem !important;   /* 32px */
+    padding-right: 2rem !important;  /* 32px */
+  }
+}
+
+/* iPad Pro portrait: force 70vh explicitly */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  .ipad-pro-portrait-h-70vh {
+    height: 70vh !important;
+  }
 }

@@ -301,8 +301,8 @@ export default function Files() {
             const filePath = `/files/${selectedFile.fileName}`;
             return (
               <>
-                {/* Mobile/Tablet fallback - hidden on desktop */}
-                <div className="xl:hidden w-full h-full flex flex-col items-center justify-center gap-6 px-6 text-center">
+                {/* Mobile/Tablet fallback - hidden on true desktop only */}
+                <div className="xl:hidden ipad-pro-landscape-force-show w-full h-full flex flex-col items-center justify-center gap-6 px-6 text-center">
                   <p className="text-white text-lg">צפייה ב-PDF במובייל נתמכת בלשונית חדשה.</p>
                   <a
                     href={filePath}
@@ -321,10 +321,10 @@ export default function Files() {
                   </a>
                 </div>
                 
-                {/* Desktop PDF viewer - hidden on mobile/tablet */}
+                {/* Desktop PDF viewer - hidden on mobile/tablet (incl. iPad Pro landscape) */}
                 <iframe
                   src={`${filePath}#toolbar=1&navpanes=1&scrollbar=1&view=FitH`}
-                  className="hidden xl:block w-full h-full"
+                  className="hidden xl:block ipad-pro-landscape-force-hide w-full h-full"
                   title={selectedFile.title}
                 />
               </>

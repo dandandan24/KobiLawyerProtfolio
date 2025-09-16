@@ -25,7 +25,7 @@ export default function Home() {
           {/* Text content - 60% width */}
           <div className={`flex-1 pt-0 fade-in-up sm:max-w-full sm:overflow-hidden ${animatedElements.has('about') ? 'visible' : ''}`} data-animate-id="about">
             <h2 className="text-4xl md:text-4xl sm:text-3xl font-bold text-gray-800 mb-6 text-center lg:text-right">אודות המשרד</h2>
-            <ul className="text-xl md:text-xl sm:text-lg text-gray-600 leading-relaxed mb-4 text-justify md:text-justify sm:text-justify md:list-disc sm:list-none xl:pr-6" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+            <ul className="text-xl md:text-xl sm:text-lg ipad-pro-portrait-text-plus text-gray-600 leading-relaxed mb-4 text-justify md:text-justify sm:text-justify md:list-disc sm:list-none xl:pr-6" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
               <li>המשרד הנו משרד בוטיק ותחומי עיסוקו המרכזיים כוללים ליטיגציה אזרחית – מסחרית, נדל&ldquo;ן, חוזים מסחריים, גבייה והוצאה לפועל.</li><br></br>
               <li>עו&ldquo;ד קובי רוזנברג בעל תואר ראשון במשפטים (LLB) מאוניברסיטת תל אביב וחבר לשכת עורכי הדין משנת 1995.</li><br></br>
               <li>כל לקוח זוכה לטיפול פרטני, תוך הקפדה על פרטים, מחויבות בלתי מתפשרת  והתוויית אסטרטגיה מותאמת אישית.</li><br></br>
@@ -34,13 +34,13 @@ export default function Home() {
             </ul>
           </div>
           {/* Picture - 40% width, 60% height */}
-          <div className="flex-1 flex justify-center sm:max-w-full sm:overflow-hidden">
+          <div className="flex-1 sm:max-w-full sm:overflow-hidden">
             <Image
               src="/kobiHomePageAbout.jpg"
               alt="Attorney Kobi Rosenberg"
               width={1000}
               height={1000}
-              className="w-full 2xl:h-[650px] h-[600] md:h-[600] sm:h-[400px] object-cover rounded-lg shadow-xl"
+              className="w-full 2xl:h-[650px] xl:h-[600px] md:h-[800px] sm:h-[400px] object-cover rounded-lg shadow-xl"
               priority
             />
           </div>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Specialities Section - 60% screen height */}
-      <section className="2xl:h-[70vh] xl:h-[90vh] md:h-[70vh] lg:h-[90vh] sm:h-auto py-20 bg-gray-800">
+      <section className="2xl:h-[70vh] xl:h-[90vh] md:h-[70vh] lg:h-[90vh] sm:h-auto ipad-pro-portrait-h-60vh ipad-pro-landscape-h-70vh py-20 bg-gray-800">
                     <div className="max-w-7xl mx-auto px-6 text-center">
               <h2 className={`text-4xl md:text-4xl sm:text-3xl font-bold text-white mb-10 fade-in-up ${animatedElements.has('specialities-title') ? 'visible' : ''}`} data-animate-id="specialities-title">תחומי התמחות</h2>
               {/* Pyramid layout: 2 items above 3, aligned over gaps */}

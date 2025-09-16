@@ -14,13 +14,13 @@ export default function ContractsPage() {
       {/* Main Content */}
       <section className="py-16 bg-gray-50">
         <div className="2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-start gap-0 lg:gap-0">
+          <div className="flex flex-col xl:flex-row items-start gap-0 xl:gap-0">
             {/* Text content - Left side on desktop, above image on mobile */}
-            <div className="w-full lg:w-2/5 lg:ml-30 lg:mr-10">
-              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden lg:block">יישוב סכסוכים וליטיגציה</h2>
+            <div className="w-full xl:w-2/5 xl:ml-30 xl:mr-10">
+              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden xl:block">יישוב סכסוכים וליטיגציה</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-center xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 ייצוג לקוחות בהתדיינויות אזרחיות בתחומים שונים לרבות; מחלוקות עסקיות הנובעות מהפרות חוזה, מתן שירותים לקויים, תביעות לפיצויים, סכסוכים כספיים, סכסוכים בין שותפים, תביעות בענייני מסחר, אנרגיה, אשראי ומימון חוץ בנקאי, נדל&ldquo;ן, תיווך וכיו&ldquo;ב. <br></br>
                 <br></br>
 משרדנו מלווה תאגידים ויחידים, בסכסוכים מסחריים מורכבים, החל מגיבוש האסטרטגיה המשפטית והשלבים המקדמיים, עריכת כתבי טענות מוקפדים, ייצוג בערכאות ועד לסיומו של ההליך המשפטי, לרבות יישוב סכסוכים, בדרך של בוררות, פשרה או גישור.<br></br>
@@ -34,7 +34,7 @@ export default function ContractsPage() {
             </div>
 
             {/* Mobile: Image below text */}
-            <div className="lg:hidden w-full mt-6">
+            <div className="xl:hidden w-full mt-6">
               <Image
                 src="/specialitisimages/litigation.png"
                 alt="conflictSolving"
@@ -46,7 +46,7 @@ export default function ContractsPage() {
             </div>
             
             {/* Picture - Right side (Desktop only) */}
-            <div className="hidden lg:flex lg:w-3/5 justify-center">
+            <div className="hidden xl:flex xl:w-3/5 justify-center">
             <Image
                 src="/specialitisimages/litigation.png"
                 alt="conflictSolving"

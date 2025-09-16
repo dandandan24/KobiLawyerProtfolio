@@ -15,13 +15,13 @@ export default function TortsPage() {
       {/* Main Content */}
       <section className="py-16 bg-gray-50">
         <div className="2xl:max-w-none 2xl:px-20 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-start gap-0 lg:gap-0">
+          <div className="flex flex-col xl:flex-row items-start gap-0 xl:gap-0">
             {/* Text content - Left side on desktop, above image on mobile */}
-            <div className="w-full lg:w-2/5 lg:ml-30 lg:mr-10">
-              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden lg:block">נדל״ן</h2>
+            <div className="w-full xl:w-2/5 xl:ml-30 xl:mr-10">
+              <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden xl:block">נדל״ן</h2>
               
-              <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+              <div className="space-y-4 lg:space-y-6 px-6 xl:px-0">
+                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-center xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
   ייצוג וליווי משפטי במגוון רחב של עסקאות נדל&ldquo;ן: בין אם מדובר בדירות מקבלן, דירת יד שניה, משרד, חנות, בניין או קרקע. נלווה אתכם בצורה מקצועית ואישית בכל שלבי העסקה. ננסח בשבילכם את הסכם הקנייה או המכירה, נבדוק עבורכם היבטים של מיסוי ונמליץ על דרך פעולה, נלווה אתכם מול הבנק בלקיחת המשכנתא ונרשום את זכויותיכם בטאבו או כל מרשם חוקי אחר (רמ&ldquo;י, חברה משכנת, רישום פנימי שמתנהל אצל קבלן).
                 </p>
               </div>
@@ -31,7 +31,7 @@ export default function TortsPage() {
             </div>
 
             {/* Mobile: Image below text */}
-            <div className="lg:hidden w-full mt-6">
+            <div className="xl:hidden w-full mt-6">
               <Image
                 src="/specialitisimages/realestate.png"
                 alt="realestate"
@@ -43,7 +43,7 @@ export default function TortsPage() {
             </div>
             
             {/* Picture - Right side (Desktop only) */}
-            <div className="hidden lg:flex lg:w-3/5 justify-center">
+            <div className="hidden xl:flex xl:w-3/5 justify-center">
             <Image
                 src="/specialitisimages/realestate.png"
                 alt="realestate"

@@ -38,7 +38,7 @@ const Navbar = () => {
   const isSpecialitiesActive = pathname.startsWith('/practice-areas');
 
   return (
-    <nav className={`${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-white shadow-md' : 'bg-transparent shadow-none') + ' lg:bg-white lg:shadow-md sticky' : 'bg-white shadow-md sticky'} py-4 px-6 top-0 z-50 w-full ${isMobileMenuOpen ? '' : 'transition-all duration-300'}`} dir="rtl">
+    <nav className={`${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-white shadow-md' : 'bg-transparent shadow-none') + ' xl:bg-white xl:shadow-md sticky' : 'bg-white shadow-md sticky'} ipad-pro-landscape-solid py-4 px-6 top-0 z-50 w-full ${isMobileMenuOpen ? '' : 'transition-all duration-300'}`} dir="rtl">
       <div className="flex justify-between items-center w-full">
         {/* Mobile Burger Menu Button */}
         <button
@@ -46,9 +46,9 @@ const Navbar = () => {
           className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
           aria-label="Toggle mobile menu"
         >
-          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' lg:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' lg:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' lg:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' xl:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' xl:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`block w-6 h-0.5 ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'bg-gray-800' : 'bg-white') + ' xl:bg-gray-800' : 'bg-gray-800'} transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
 
         {/* Desktop Navigation items on the right */}
@@ -132,7 +132,7 @@ const Navbar = () => {
             <img 
               src="/Logo.svg" 
               alt="Logo" 
-              className={`h-12 w-auto ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'brightness-100 invert-0' : 'brightness-0 invert') + ' lg:brightness-100 lg:invert-0' : ''}`} 
+              className={`h-12 w-auto ${pathname === '/' ? (isScrolled || isMobileMenuOpen ? 'brightness-100 invert-0' : 'brightness-0 invert') + ' xl:brightness-100 xl:invert-0' : ''}`}
             />
           </Link>
         </div>
