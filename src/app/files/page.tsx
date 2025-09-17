@@ -20,7 +20,7 @@ export default function Files() {
   const files: FileItem[] = [
     {
       id: 1,
-      title: " אילן ששון נגד דוד וצורי בעמ",
+      title: " אילן ששון נגד דוד וצורי בע״מ",
       description: "דחיית התנגדות לביצוע שטר בשל חוסר תום לב והגנת בדים של החייב",
       fileName: "file1.pdf",
       category: "contracts"
@@ -41,7 +41,7 @@ export default function Files() {
     },
     {
       id: 4,
-      title: "סטארלנד השקעות ויזמות בעמ נגד לילך מויאל אלחרר ואח'",
+      title: "סטארלנד השקעות ויזמות בע״מ נגד לילך מויאל אלחרר ואח'",
       description: "ה'גורם היעיל' ו'דרישת הכתב' בתביעת מתווך שהתקבלה לתשלום דמי תיווך בהתאם לחוק המתווכים במקרקעין, תשנו 1999.",
       fileName: "file4.pdf",
       category: "mediation"
@@ -69,70 +69,63 @@ export default function Files() {
     },
     {
       id: 8,
-      title: "חופרי ערוער 1996 בעמ נגד דניאל חגבי",
+      title: "חופרי ערוער 1996 בע״מ נגד דניאל חגבי",
       description: "קבלת ערעור על פסק דין בו חויב המשיב לשלם למערער בגין עבודות עפר שביצעה עבורו, וחיוב המשיב לשלם למערערת את מלוא חובו אליה.",
       fileName: "file8.pdf",
       category: "arbitration"
     },
     {
       id: 9,
-      title: "Slovk Finance Group  נגד י.ת. עזדן 2001 בעמ",
+      title: "Slovk Finance Group  נגד י.ת. עזדן 2001 בע״מ",
       description: "קבלת תביעה עס 1.87 משח שהוגשה בגין סכסוך בין שותפים למיזם משותף שעסק במימון עסקאות יבוא/יצוא.",
       fileName: "file9.pdf",
       category: ""
     },
     {
       id: 10,
-      title: "ד.כ. חנויות להשכרה בהרצליה הצעירה בעמ נגד חברת אברהם כהן ושות' חברה קבלנית בעמ (בכינוס נכסים ופירוק)",
+      title: "ד.כ. חנויות להשכרה בהרצליה הצעירה בע״מ נגד חברת אברהם כהן ושות' חברה קבלנית בע״מ (בכינוס נכסים ופירוק)",
       description: "סכסוך בין בעלי זכויות ביחס לחנות בהרצליה ושאלת התחרות בין הזכויות על פי 'הערת אזהרה' לבין זכויות נושים אחרים.",
       fileName: "file10.pdf",
       category: "arbitration"
     },
     {
-      id: 11,
-      title: "רזגל אנרגיה בעמ נגד דלק חברת הדלק הישראלית בעמ – פסק דין חלקי",
-      description: "פסק דין בתביעה למתן חשבונות שהוגשה על ידי התובעת, רזגל אנרגיה בעמ, כנגד דלק, חברת הדלק הישראלית, מכוחו חויבה דלק במתן חשבונות לתובעת וקבלת עמדת התובעת לגבי פרשנות ההסכם שבין הצדדים.",
-      fileName: "file11.pdf",
-      category: "arbitration"
-    },
-    {
       id: 12,
-      title: "נ.מ. נכסים מניבים בעמ נגד ברדה ואח'",
+      title: "נ.מ. נכסים מניבים בע״מ נגד ברדה ואח'",
       description: "קבלת תביעה לתשלום דמי ניהול מבעלי נכסים במרכז מסחרי בצורן.",
       fileName: "file12.pdf",
       category: "arbitration"
     },
     {
       id: 13,
-      title: "תקווה כפר להכשרה מקצועית בגבעות זייד בעמ ואח' נגד אריה פינקוביץ ואח'",
+      title: "תקווה כפר להכשרה מקצועית בגבעות זייד בע״מ ואח' נגד אריה פינקוביץ ואח'",
       description: "הפרת חובות הזהירות של דירקטורים לנזקי חברת התקווה – כפר חוסים, בגין העברות כספי מהחברה לחברת הבת שלה, וחיוב המבטחת בנזקים שנגרמו כתוצאה מרשלנות הדירקטורים.",
       fileName: "file13.pdf",
       category: "arbitration"
     },
     {
       id: 14,
-      title: "יוסף גדעוני נגד ארמונות חן בעמ",
+      title: "יוסף גדעוני נגד ארמונות חן בע״מ",
       description: "דחיית תביעה עס 834,000 ₪ שהוגשה על ידי מתווך. נקבע כי המתווך לא הוכיח כי היה הגורם היעיל בהתקשרות בין הנתבעים לבעלי המקרקעין.",
       fileName: "file14.pdf",
       category: "arbitration"
     },
     {
       id: 15,
-      title: "יהושע אנידג'ר ואח' נגד כאן גולן חברה לפיתוח ולהובלות בעמ",
+      title: "יהושע אנידג'ר ואח' נגד כאן גולן חברה לפיתוח ולהובלות בע״מ",
       description: "דחיית תביעת בעלי נכסים שטענו כי העברת זכויות ניהול במרכז מסחרי נעשתה בניגוד להסכמי ניהול ודחיית דרישתם לקבוע דמי ניהול שונים מאלה שבהם הם מחויבים.",
       fileName: "file15.pdf",
       category: "arbitration"
     },
     {
       id: 16,
-      title: "י.ת. עזדן 2001 בעמ נגד Slovak",
+      title: "י.ת. עזדן 2001 בע״מ נגד Slovak",
       description: "דחיית ערעור בשל אי התערבות ערכאת הערעור בממצאים עובדתיים, וביסוס טענת חוסר תום הלב של המערערים שטענו להפרת החייבות עי המשיבה מחד ולהיעדר יריבות עמה, מאידך.",
       fileName: "file16.pdf",
       category: "arbitration"
     },
     {
       id: 17,
-      title: "ויקטוריה גבריאל נגד המרכז לשיקום רפואי בעמ",
+      title: "ויקטוריה גבריאל נגד המרכז לשיקום רפואי בע״מ",
       description: "הרמת מסך ההתאגדות וקבלת טענות עובדות לחיוב אישי של מנהלת החברה שהעסיקה אותן בגין אי תשלום שכרן ועירוב נכסים",
       fileName: "file17.pdf",
       category: "arbitration"
@@ -146,7 +139,7 @@ export default function Files() {
     },
     {
       id: 19,
-      title: "Zhejiang Hangecha Engineering Machinery Co Ltd נגד ר.ח. פורקליפט והשקעות בעמ'",
+      title: "Zhejiang Hangecha Engineering Machinery Co Ltd נגד ר.ח. פורקליפט והשקעות בע״מ'",
       description: "ביטול פסק דין מחובת הצדק וביטול היתר המצאה לחוייבות בגין קיומה של תניית שיפוט ייחודית.",
       fileName: "file19.pdf",
       category: "arbitration"
@@ -160,7 +153,7 @@ export default function Files() {
     },
     {
       id: 21,
-      title: "בנק למסחר בעמ (בפירוק) נגד פרוספר נשיונל פיננס חברה פיננסית בעמ",
+      title: "בנק למסחר בע״מ (בפירוק) נגד פרוספר נשיונל פיננס חברה פיננסית בע״מ",
       description: "קבלת תביעה של בנק שנמצא בהליך של פירוק ודחיית טענת הנתבעים כי אין לחייבם בחוב הפסוק בשל המעילה שבוצעה בבנק.",
       fileName: "file21.pdf",
       category: "arbitration"
@@ -174,7 +167,7 @@ export default function Files() {
     },
     {
       id: 23,
-      title: "יצחק צבי נגד אינסטרומטריקס בקרה תעשיתית בעמ",
+      title: "יצחק צבי נגד אינסטרומטריקס בקרה תעשיתית בע״מ",
       description: "דחיית תביעה לתשלום פיצויי פיטורין לאחר שהתובע לא הוכיח כי התפטרותו נבעה מהעתקת מקום מגוריו.",
       fileName: "file23.pdf",
       category: "arbitration"
@@ -229,7 +222,6 @@ export default function Files() {
       <section className="h-[50vh] relative flex items-center justify-center" style={{ backgroundImage: "url('/supremeCourt.jpeg')", backgroundSize: 'cover', backgroundPosition: '40% 60%' }}>
         <div className="text-center text-white z-10">
           <h1 className="text-5xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">פסקי דין</h1>
-          <p className="text-lg sm:text-xl lg:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">הורדת פסקי דין תקדימים משפטיים מקצועיים</p>
         </div>
         <div className="absolute inset-0 bg-black/30"></div>
       </section>

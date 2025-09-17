@@ -84,6 +84,11 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
   scrollbar-width: thin !important;
   scrollbar-color: #888 #f1f1f1 !important;
   overflow-y: scroll !important;
+  direction: ltr !important;
+}
+
+.always-visible-scrollbar > * {
+  direction: rtl !important;
 }
 
 .always-visible-scrollbar::-webkit-scrollbar {

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import { useScrollAnimation } from "./components/ScrollAnimationProvider";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
   return (
     <div className="font-sans" dir="rtl">
       {/* Section 1: Hero Section - Full height on mobile, 70% on desktop */}
-      <section className="h-screen md:h-[70vh] relative flex items-center justify-center bg-cover bg-center bg-no-repeat -mt-[73px] pt-[73px]" style={{ backgroundImage: "url('/HomePageBackGround.jpeg')" }}>
+      <section className="h-screen md:h-[70vh] relative flex items-center justify-center bg-cover bg-center bg-no-repeat -mt-[73px] pt-[73px]" style={{ backgroundImage: "url('/HomePageBackGround.jpg')" }}>
         <div className={`text-center text-white z-10 fade-in-up ${animatedElements.has('hero') ? 'visible' : ''}`} data-animate-id="hero">
           <h1 className="text-5xl md:text-5xl sm:text-3xl font-bold mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">עו&ldquo;ד קובי רוזנברג</h1>
           <p className="text-xl md:text-xl sm:text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"> משפט אזרחי ומסחרי</p>
@@ -55,12 +56,13 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-y-8 gap-x-4 md:gap-y-10 md:gap-x-6">
                 {/* Top row: columns 2 and 4 */}
                 {[
-                  { title: "יישוב סכסוכים וליטיגציה", description: "ייצוג  בהתדיינויות אזרחיות ומסחריות בבתי משפט", svg: "/conflictssolving.svg" },
-                  { title: "משפט מסחרי", description: "ליווי וייעוץ שוטף לחברות שונות בכל תחומי המשפט המסחרי", svg: "/commercial.svg" },
+                  { title: "יישוב סכסוכים וליטיגציה", description: "ייצוג  בהתדיינויות אזרחיות ומסחריות בבתי משפט", svg: "/conflictssolving.svg", href: "/practice-areas/contracts" },
+                  { title: "משפט מסחרי", description: "ליווי וייעוץ שוטף לחברות שונות בכל תחומי המשפט המסחרי", svg: "/commercial.svg", href: "/practice-areas/labor-law" },
                 ].map((item, index) => (
-                  <div
+                  <Link
                     key={`top-${index}`}
-                    className={`text-center fade-in-up md:row-start-1 ${index === 0 ? 'md:col-start-2' : 'md:col-start-4'} ${animatedElements.has(`speciality-top-${index}`) ? 'visible' : ''}`}
+                    href={item.href}
+                    className={`text-center fade-in-up md:row-start-1 ${index === 0 ? 'md:col-start-2' : 'md:col-start-4'} ${animatedElements.has(`speciality-top-${index}`) ? 'visible' : ''} cursor-pointer hover:scale-105 transition-transform duration-300`}
                     data-animate-id={`speciality-top-${index}`}
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
@@ -69,18 +71,19 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl md:text-xl sm:text-lg font-semibold text-white mb-2">{item.title}</h3>
                     <p className="text-white md:text-base sm:text-sm">{item.description}</p>
-                  </div>
+                  </Link>
                 ))}
 
                 {/* Bottom row: columns 1, 3, 5 */}
                 {[
-                  { title: "נדל״ן", description: "עריכת הסכמי מכר, שכירות, משכנתאות, הלוואות", svg: "/realestate.svg" },
-                  { title: "העברה בין דורית ושירותי נוטריון", description: "עריכת צוואות, יפוי כח מתמשך, הסכמים בין יורשים, נאמנויות ומתן שירותים נוטריונים.", svg: "/contract.svg" },
-                  { title: "גבייה והוצאה לפועל", description: "גביה וניהול הליכי הוצאה לפועל עבור פרטים וחברות", svg: "/gvia.svg" },
+                  { title: "נדל״ן", description: "עריכת הסכמי מכר, שכירות, משכנתאות, הלוואות", svg: "/realestate.svg", href: "/practice-areas/torts" },
+                  { title: "העברה בין דורית ושירותי נוטריון", description: "עריכת צוואות, יפוי כח מתמשך, הסכמים בין יורשים, נאמנויות ומתן שירותים נוטריונים", svg: "/contract.svg", href: "/practice-areas/family-law" },
+                  { title: "גבייה והוצאה לפועל", description: "גביה וניהול הליכי הוצאה לפועל עבור פרטים וחברות", svg: "/gvia.svg", href: "/practice-areas/commercial-law" },
                 ].map((item, index) => (
-                  <div
+                  <Link
                     key={`bottom-${index}`}
-                    className={`text-center fade-in-up md:row-start-2 ${index === 0 ? 'md:col-start-1' : index === 1 ? 'md:col-start-3' : 'md:col-start-5'} ${animatedElements.has(`speciality-bottom-${index}`) ? 'visible' : ''}`}
+                    href={item.href}
+                    className={`text-center fade-in-up md:row-start-2 ${index === 0 ? 'md:col-start-1' : index === 1 ? 'md:col-start-3' : 'md:col-start-5'} ${animatedElements.has(`speciality-bottom-${index}`) ? 'visible' : ''} cursor-pointer hover:scale-105 transition-transform duration-300`}
                     data-animate-id={`speciality-bottom-${index}`}
                     style={{ animationDelay: `${(index + 2) * 0.2}s` }}
                   >
@@ -89,7 +92,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl md:text-xl sm:text-lg font-semibold text-white mb-2">{item.title}</h3>
                     <p className="text-white md:text-base sm:text-sm">{item.description}</p>
-                  </div>
+                  </Link>
                 ))}
               </div>
         </div>

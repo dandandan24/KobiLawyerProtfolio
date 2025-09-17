@@ -26,12 +26,13 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-2">צור קשר</h4>
             <p className={subTextColor}>טלפון: 03-5609697</p>
-            <p className={subTextColor}>אימייל: kobi@rosenberg-law.co.il</p>
+            <p className={subTextColor}>טלפון נייד: 050-333-9697</p>
+            <p className={subTextColor}>דוא״ל: kobi@rosenberg-law.co.il</p>
           </div>
           <div>
             <h4 className="font-semibold mb-2">כתובת</h4>
-            <p className={subTextColor}>מידטאון, דרך מנחם בגין 144, קומה 36</p>
-            <p className={subTextColor}>תל אביב, ישראל</p>
+            <p className={subTextColor}>מידטאון, קומה 36, דרך מנחם בגין 144</p>
+            <p className={subTextColor}>תל אביב</p>
           </div>
         </div>
 
