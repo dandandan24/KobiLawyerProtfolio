@@ -20,7 +20,7 @@ export default function LaborLawPage() {
               <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden xl:block">משפט מסחרי</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 xl:px-0">
-                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-center xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-justify xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 משרדנו עוסק בליווי וייעוץ שוטף לחברות שונות בכל תחומי פעילותן המסחרית על כל גווניה, לרבות; הכנת חוזים מסוגים שונים כגון הסכמי התקשרות מסחריים, הסכמי שכירות,  הסכמים עם קבלנים, פרילנסרים וספקים, הסכמים מול לקוחות, הסכמי ניהול, הסכמי מכר מניות, עריכת הסכמים בין בעלי המניות ו/או עם צדדים שלישיים במקרה של הכנסת שותפים, רכישת עסקים נוספים, מכירת פעילות,  מכירת מניות וכיוצ&ldquo;ב.
 
                 </p>

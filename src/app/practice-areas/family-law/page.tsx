@@ -20,7 +20,7 @@ export default function FamilyLawPage() {
               <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden xl:block">צוואות ויפוי כח מתמשך</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 xl:px-0">
-                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-center xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-justify xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 עריכת צוואות מותאמות אישית וכלכלית תוך יצירת נאמנויות והקדשים פרטיים בצוואה.
 עריכת הסכמי חלוקת עזבון, הסכמי ממון ועוד.<br></br>
 <br></br>

@@ -19,7 +19,7 @@ export default function CommercialLawPage() {
               <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden xl:block">גבייה והוצאה לפועל</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
-                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-center xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-justify xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 גביה וניהול הליכי הוצל&ldquo;פ עבור פרטים וחברות, החל מפתיחת תיק ההוצאה לפועל דרך ניהול התדיינויות שונות בלשכת ההוצאה לפועל ובית המשפט והגעה להסדרי פשרה עם לקוחות, וכלה במימוש בפועל של נכסים.
 
                 </p>

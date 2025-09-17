@@ -21,7 +21,7 @@ export default function TortsPage() {
               <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden xl:block">נדל״ן</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 xl:px-0">
-                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-center xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-justify xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
   ייצוג וליווי משפטי במגוון רחב של עסקאות נדל&ldquo;ן: בין אם מדובר בדירות מקבלן, דירת יד שניה, משרד, חנות, בניין או קרקע. נלווה אתכם בצורה מקצועית ואישית בכל שלבי העסקה. ננסח בשבילכם את הסכם הקנייה או המכירה, נבדוק עבורכם היבטים של מיסוי ונמליץ על דרך פעולה, נלווה אתכם מול הבנק בלקיחת המשכנתא ונרשום את זכויותיכם בטאבו או כל מרשם חוקי אחר (רמ&ldquo;י, חברה משכנת, רישום פנימי שמתנהל אצל קבלן).
                 </p>
               </div>

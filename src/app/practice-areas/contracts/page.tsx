@@ -20,7 +20,7 @@ export default function ContractsPage() {
               <h2 className="text-4xl font-bold text-gray-800 mb-6 hidden xl:block">יישוב סכסוכים וליטיגציה</h2>
               
               <div className="space-y-4 lg:space-y-6 px-6 lg:px-0">
-                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-center xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                <p className="text-base sm:text-lg xl:text-xl ipad-pro-text-bigger text-gray-600 leading-relaxed text-justify xl:text-justify" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 ייצוג לקוחות בהתדיינויות אזרחיות בתחומים שונים לרבות; מחלוקות עסקיות הנובעות מהפרות חוזה, מתן שירותים לקויים, תביעות לפיצויים, סכסוכים כספיים, סכסוכים בין שותפים, תביעות בענייני מסחר, אנרגיה, אשראי ומימון חוץ בנקאי, נדל&ldquo;ן, תיווך וכיו&ldquo;ב. <br></br>
                 <br></br>
 משרדנו מלווה תאגידים ויחידים, בסכסוכים מסחריים מורכבים, החל מגיבוש האסטרטגיה המשפטית והשלבים המקדמיים, עריכת כתבי טענות מוקפדים, ייצוג בערכאות ועד לסיומו של ההליך המשפטי, לרבות יישוב סכסוכים, בדרך של בוררות, פשרה או גישור.<br></br>
